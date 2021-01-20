@@ -1,0 +1,466 @@
+﻿
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-store"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/jquery/jquery-1.7.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/lhgdialog/lhgdialog.min.js?self=false&skin=discuz" charset="UTF-8"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/check.js" charset="UTF-8"></script>  
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/main.js"></script>   
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/ztree/js/jquery.ztree.core-3.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/common/common.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/My97DatePicker/WdatePicker.js"></script> 
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/jqueryValidate/jquery.validate.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/jqueryValidate/jquery.metadata.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/jqueryValidate/additional-methods.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/jqueryValidate/messages_cn.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/jqueryValidate/jquery.validate.castom.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/card.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/wordexcel.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/jgjy.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/selfAlert.js"></script>
+<script language="javascript" type="text/javascript" src="http://222.133.25.250:9080/sdcsm/js/jquery/jquery.bgiframe.js"></script>
+
+<script language="javascript" type="text/javascript">
+    function tz(url) {
+        var api = frameElement.api;
+        if (api != null && api != '') {
+            var W = api.opener;
+        }
+        $("#mainContent", top.window.document).attr("src", "/sdcsm" + url);
+    }
+</script>
+<script type="text/javascript">
+    var dqdlyhsgjg = "371427B10010";
+    function setWidth() {
+        T = $("#tableWrapper1");
+        B = $("#tableWrapper2");
+        T.width() > B.width() ? B.width(T.width()) : T.width(B.width());
+    }
+    setWidth();
+    window.onresize = function () {
+        T = $("#tableWrapper1");
+        B = $("#tableWrapper2");
+        T.width() > B.width() ? B.width(T.width()) : T.width(B.width());
+    };
+    window.onload = function () {
+        var radios = document.getElementsByTagName("input");
+        for (var i = 0; i < radios.length; i++) {
+            //alert(radios[i].ondblclick);
+            if (radios[i].type == "radio" && radios[i].ondblclick == null) {
+                radios[i].ondblclick = function () {
+                    this.checked = false;
+                }
+            }
+        }
+    };
+    window.onmousewheel = document.onmousewheel = function () {
+        var radios = document.getElementsByTagName("input");
+        for (var i = 0; i < radios.length; i++) {
+            radios[i].blur();
+        }
+        //alert($("body",top.document).html());
+        $("#chedan", top.window.document).hide();
+    };
+    $(window).scroll(function () {//è§¦åæ»å¨æ¡äºä»¶ï¼å¹¶ç»å®ä¸ä¸ªäºä»¶å½æ°
+        var bodyTop = 0;
+        if (typeof window.pageYOffset != 'undefined') {
+            bodyTop = window.pageYOffset; //æçæ¯æ»å¨æ¡é¡¶é¨å°ç½é¡µé¡¶é¨çè·ç¦»
+            //document.body.scrollTopæ»å¨æ¡é¡¶é¨å°ç½é¡µé¡¶é¨çè¿æ®µè·ç¦»
+        } else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat') {
+            bodyTop = document.documentElement.scrollTop;
+        } else if (typeof document.body != 'undefined') {
+            bodyTop = document.body.scrollTop;
+        }
+        // è®¾ç½®å±çCSSæ ·å¼ä¸­çtopå±æ§, æ³¨æè¦æ¯å°åï¼è¦ç¬¦åâæ åâ
+        $("#qqonline").css("top", bodyTop);
+        // // è®¾ç½®å±çå
+å®¹ï¼è¿éåªæ¯æ¾ç¤ºå½åçscrollTop
+        //$("#qqonline").text(bodyTop);
+        $("#light").css("top", bodyTop);
+        $("#lightycf").css("top", bodyTop);
+    });
+    function dykj() {
+        var Sys = '';
+        var ua = navigator.userAgent.toLowerCase();
+        if ("0" == "1") {
+            if (window.ActiveXObject) {
+                Sys = ua.match(/msie ([\d.]+)/)[1];
+                if (Sys < 7) {
+                    $("#licenceButton").html("");
+                }
+            } else if (document.getBoxObjectFor) {
+                Sys = ua.match(/firefox\/([\d.]+)/)[1];
+                $("#licenceButton").html("");
+            } else if (window.MessageEvent && !document.getBoxObjectFor) {
+                Sys = ua.match(/chrome\/([\d.]+)/)[1];
+                $("#licenceButton").html("");
+            } else if (window.opera) {
+                Sys = ua.match(/opera.([\d.]+)/)[1];
+                $("#licenceButton").html("");
+            } else if (window.openDatabase) {
+                Sys = ua.match(/version\/([\d.]+)/)[1];
+                $("#licenceButton").html("");
+            }
+        } else (
+    	$("#licenceButton").html("")
+    )
+    }
+</script>
+
+
+
+<link href="/sdcsm/css/main.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="/sdcsm/js/ztree/css/demo.css" type="text/css">
+<link rel="stylesheet" href="/sdcsm/js/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<style type="text/css">
+	#qqonline {
+		background-color:#d1e9ec;
+		border: 0px solid #fcc;
+		position: absolute;
+		top: 0px;
+		width: 84%;
+	}
+			.Notice{
+				margin:20px auto;
+				width:950px;
+				padding:10px;
+				border:1px solid #ccc;
+				text-align:left;
+				background:#fff;
+			}
+			.NoticeTable{
+				border:#77bfb0 solid 2px;
+				margin:0px auto;
+				margin-top:0px;
+				border-collapse:collapse;
+			}
+			.NoticeTable td {
+				padding:3px 3px;
+				border-bottom:#d4dddc solid 1px;
+				border-right:#d4dddc solid 1px;
+			}
+			.dark {
+				background:#eaf4f6
+			}
+			.dark2 {
+				background:#f6f6f6
+			}
+</style>
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Language" content="zh-cn">
+		<title>老年人中医药健康管理服务记录表列表页面</title>
+		<link rel="stylesheet" type="text/css" href="/sdcsm/css/input.css">
+		<link rel="stylesheet" type="text/css" href="/sdcsm/css/index.css">
+		<link rel="stylesheet" type="text/css" href="/sdcsm/css/qq.css" />
+		<script type="text/javascript" src="/sdcsm/dwr/engine.js"></script>
+		<script type="text/javascript" src="/sdcsm/dwr/util.js"> </script>
+		<script type="text/javascript"
+			src="/sdcsm/dwr/interface/getCommon.js"></script>
+		<script language="javascript" type="text/javascript"
+			src="/sdcsm/js/woman.js.jsp"></script>
+		<script type="text/javascript">
+		    function toAdd(dah) {
+		        $("#tlnrZyytzgl").attr("action", "http://222.133.25.250:9080/sdcsm//lnr/zyytzgl/toAdd.action?dah=" + dah);
+		        $("#tlnrZyytzgl").submit();
+		    }
+		    function viewById(id) {
+		        $("#tlnrZyytzgl").attr("action", "http://222.133.25.250:9080/sdcsm//lnr/zyytzgl/viewById.action?id=" + id);
+		        $("#tlnrZyytzgl").submit();
+		    }
+		    function zyychangeRed(id) {
+		        $("span").attr("style", "");
+		        $("#time_" + id).attr("style", "color:red");
+		    }
+
+		    $(document).ready(function () {
+		        zyychangeRed('');
+		    });
+		</script>
+	</head>
+	<body>
+		<input type="hidden" id="DGrdabh" name="DGrdabh" value="371427110060016001" />
+		 
+			
+		<div class='QQbox' id='divQQbox'>
+			<div class='Qlist' id='divOnline' onmouseout='hideMsgBox(event);'
+				style='display: none;'>
+			</div>
+			<div id='divMenu' onmouseover='OnlineOver();'>
+				<img src='/sdcsm/images/jkgytx.gif' class='press' alt='健康干预提醒' />
+			</div>
+		</div>
+		
+		
+		<form action="" id="tlnrZyytzgl" name="form1" method="post">
+			<div id="qqonline" style="height: 30px;">
+				<table border="0" width="940" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<ul class="buttonUl">
+								<li>
+									<button type="button"  class="buttonInput2" onclick="toAdd('371427110060016001');">添加</button>
+								</li>
+								<li>
+									
+										
+										
+											<button type="button" class="buttonInput2"
+												onclick="window.open('/sdcsm/helpDocuments/lnrzytz/zzytzgl_help.html')">
+												健康指导
+											</button>
+										
+									
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="exportWord" align="center" class="tableContainer  shadow">
+				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td style="height: 50px;">
+							
+						</td>
+					</tr>
+				</table>
+				<table align="center" border="0" width="940" cellspacing="0"
+					cellpadding="0" id="table1" class="QueryTable3">
+					<tr>
+						<td colspan="6" align="center" class="dark">
+							<div class="title_size">
+								老年人中医药健康管理服务记录表列表
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="dark" width="15%">
+							档案编号
+						</td>
+						<td width="18%">
+							371427110060016001
+						</td>
+						<td class="dark" width="15%">
+							姓 名
+						</td>
+						<td width="18%">
+							金文英
+						</td>
+						<td class="dark" width="15%">
+							性 别
+						</td>
+						<td class="dark2" width="19%">
+							<span>女</span>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="dark">
+							身份证号
+						</td>
+						<td class="dark2">
+							37242319320605342X
+						</td>
+						<td class="dark">
+							出生日期
+						</td>
+						<td class="dark2">
+							1932-06-05
+						</td>
+						<td class="dark">
+							联系电话
+						</td>
+						<td class="dark2">
+							15726080785
+						</td>
+					</tr>
+
+					<tr>
+						<td class="dark">
+							居住状态
+						</td>
+						<td>
+							<span>本地户籍常住</span>
+						</td>
+						<td class="dark">
+							居住地址
+						</td>
+						<td colspan="3">
+							山东省
+							德州市
+							夏津县
+							新盛店镇
+							小辛庄村
+							山东省夏津县新盛店镇小辛庄村
+						</td>
+					</tr>
+				</table>
+				<table align="center" border="0" width="940" cellspacing="0" cellpadding="0"
+						id="table2" class="QueryTable3" style="border-top: 0;">
+					<tr class="headTr">
+						<td align="center" class="dark">
+							年 份
+						</td>
+						<td align="center" class="dark">
+							老年人中医药健康管理记录
+						</td>
+					</tr>
+					
+						
+							
+								<tr>
+									<td align="align" class="dark">
+										2016
+									</td>
+									<td align="align">
+										<div style="display:block" class="divlist">
+											<table width="100%" border="0" class="new_tb2">
+												<tr>
+													<td align="center" class="dark">
+														随访时间
+													</td>
+													<td align="center" class="dark">
+														气虚质
+													</td>
+													<td align="center" class="dark">
+														阳虚质
+													</td>
+													<td align="center" class="dark">
+														阴虚质
+													</td>
+													<td align="center" class="dark">
+														痰湿质
+													</td>
+													<td align="center" class="dark">
+														湿热质
+													</td>
+													<td align="center" class="dark">
+														血瘀质
+													</td>
+													<td align="center" class="dark">
+														气郁质
+													</td>
+													<td align="center" class="dark">
+														特禀质
+													</td>
+													<td align="center" class="dark">
+														平和质
+													</td>
+												</tr>
+												
+													
+														
+															<tr id="tr_193371">
+																<td align="center">
+																	<a href="/sdcsm/lnr/zyytzgl/viewById.action?id=193371"><span id="time_193371">2016-10-12</span></a>
+																</td>
+																<td align="left">得分:<input type="text" name="lQxDf" value="9" readonly class="input_7"/>
+																	
+																		</br>辨识:
+																		
+																		倾向是
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lYangDf" value="15" readonly class="input_7"/>
+																	
+																		</br>辨识:
+																		是
+																		
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lYinDf" value="7" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lTsDf" value="9" readonly class="input_7"/>
+																	
+																		</br>辨识:
+																		
+																		倾向是
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lSrDf" value="5" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lXyDf" value="7" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lQyDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lTbDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lPhDf" value="17" readonly class="input_7"/>
+																	
+																</td>
+															</tr>
+														
+															<tr id="tr_194172">
+																<td align="center">
+																	<a href="/sdcsm/lnr/zyytzgl/viewById.action?id=194172"><span id="time_194172">2016-11-16</span></a>
+																</td>
+																<td align="left">得分:<input type="text" name="lQxDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lYangDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lYinDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lTsDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lSrDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lXyDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lQyDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lTbDf" value="4" readonly class="input_7"/>
+																	
+																</td>
+																<td align="left">得分:<input type="text" name="lPhDf" value="21" readonly class="input_7"/>
+																	
+																		</br>辨识:
+																		是
+																		
+																	
+																</td>
+															</tr>
+														
+													
+													
+												
+											</table>
+										</div>
+									</td>
+								</tr>
+							
+						
+					
+					
+				</table>
+			</div>
+			<table height="10"></table>
+		</form>
+		<script type="text/javascript" src="/sdcsm/js/qq.js"></script>
+	</body>
+</html>

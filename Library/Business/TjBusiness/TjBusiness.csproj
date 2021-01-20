@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78375E08-276B-46D0-8E62-3627438C9059}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TjBusiness</RootNamespace>
+    <AssemblyName>TjBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluorineFx">
+      <HintPath>..\..\..\QCSoft.UADS.EXLibrary\FluorineFx.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\QCSoft.UADS.EXLibrary\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\QCSoft.UADS.EXLibrary\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\QCSoft.UADS.EXLibrary\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\QCSoft.UADS.EXLibrary\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="tessnet2_32, Version=2.0.4.0, Culture=neutral, PublicKeyToken=1550524b5ba07e29, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QCSoft.UADS.EXLibrary\tessnet2_32.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TjBusiness.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\DAL\DAL.csproj">
+      <Project>{A525B97B-B2B3-43A8-9D66-DDFA9AE9D3FE}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Model.InfoModel\Model.InfoModel.csproj">
+      <Project>{2C218EF5-15A9-48DF-B241-695DA8AC0775}</Project>
+      <Name>Model.InfoModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Model.JsonModel\Model.JsonModel.csproj">
+      <Project>{F48114BC-964E-409D-A693-BE4A8FABF5AD}</Project>
+      <Name>Model.JsonModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Model.SocketModel\Model.SocketModel.csproj">
+      <Project>{D6323835-E9B0-4CA1-B21A-C225461E79AF}</Project>
+      <Name>Model.SocketModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\Utilities.Common\Utilities.Common.csproj">
+      <Project>{7E11B21F-D88D-47E7-B82C-4B4370F1331C}</Project>
+      <Name>Utilities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseBusiness\BaseBusiness.csproj">
+      <Project>{9cadc522-f5d5-4ea5-beb3-9bb8da1ffa51}</Project>
+      <Name>BaseBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonBusiness\CommonBusiness.csproj">
+      <Project>{E9C191BF-AFC3-4A53-AC99-B47576699373}</Project>
+      <Name>CommonBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LnrBusiness\LnrBusiness.csproj">
+      <Project>{E7681F54-1FB7-40FB-A2FA-1A005BFD701B}</Project>
+      <Name>LnrBusiness</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

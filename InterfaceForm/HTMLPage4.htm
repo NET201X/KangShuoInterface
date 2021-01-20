@@ -1,0 +1,256 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+
+
+
+
+<html>
+  <head>
+    
+    <title>个人基本信息显示</title>
+<script type="text/javascript">
+
+    //複選框
+    $("#allClick").click(function () {
+
+        if ($(this).attr("checked")) {
+            $("input[name='dahSign']:checkbox").each(function () {
+                $(this).attr("checked", true);
+
+            });
+
+
+        } else {
+
+
+            $("input[name='dahSign']:checkbox").each(function () {
+                $(this).attr("checked", false);
+            });
+
+
+        } 
+    });
+
+    /*$(function(){
+    $(".daha").each(function(){
+    if($(this).nextAll(".sf").text() == "" || $(this).nextAll(".sf").text() == "null"){
+    $(this).children("a").css("color","red");
+    }
+    });
+		
+    });*/
+    $(function () {
+        $(".sf").each(function () {
+            if ($(this).nextAll(".aaa").text() == "N") {
+                $(this).css("color", "red");
+            }
+        });
+        $(".daha").each(function () {
+            if ($(this).nextAll(".sf").text() == "" || $(this).nextAll(".sf").text() == "null") {
+                $(this).children("a").css("color", "red");
+            }
+        });
+
+    });
+</script>
+  </head>
+  
+  <body>
+		  <!---查詢結果表格 --->
+		  <div class="qybmgd">
+        <table width="100%" cellpadding="0" cellspacing="0" class="QueryTable" align="center">
+		    <tr class="headTr">
+		      <td align="center"><input type="checkbox" id="allClick"  align="left" ></td>
+			  <td align="center">序号</td>
+		      <td align="center">档案号</td>
+		      <td align="center">姓名</td>
+		      <td align="center">性别</td>
+		      <td align="center">出生日期</td>
+		      <td align="center">身份证号</td>
+		      <td align="center">居住地址</td>
+		      <td align="center">本人电话</td>
+		      <td align="center">联系人电话</td>
+		      <td align="center">当前所属机构</td>
+		      <td align="center">医疗支付方式</td>
+		      <td align="center">签约状态</td>
+			  <!--2019-12-24 -->
+		      <td align="center">签约团队</td>
+		      <td align="center">签约医生</td>
+		      <!-- <td align="center">所属团队</td> -->
+		      <td align="center">录入人</td>
+		      <td align="center">录入时间</td>
+		      <td align="center">档案状态</td>
+		    </tr>
+		
+				
+			 <tr>
+				<td align="center" nowrap>
+					<input type="checkbox" tag="371482B10020" value="371482460020005001" name="dahSign" id="dahSign" >
+				</td>
+				<td align="center" nowrap>
+				<a href="javascript:;" onclick="jtgx('3714824600200050')">01&nbsp;<img border="0" src="images/house.gif" alt="家庭关系"/>
+					</a>
+					<a href="javascript:;" onclick="wsda('371482460020005001'+','+'f6ec153673fa230e84bc5058576264ad')">
+					<img src="images/clock.gif" alt="完善档案" border="0" >
+					</a>
+				</td>
+				<td align="center" class="daha" nowrap><a href="healthArchives/content.action?dJtdabh=3714824600200050&dGrdabh=371482460020005001&status=/sdcsm/healthArchives/showGr.action?dGrdabh=371482460020005001" target="_blank"  >371482460020005001</a></td>
+				<td align="center">刘海</td>
+				<td align="center"><span>男</span></td>
+				<td align="center" nowrap>1948-03-07</td>
+				<td align="center" class="sf">371482194803072833</td>
+				<td align="left">
+				<!--  
+				山东省德州市禹城市
+				-->
+				东城街道办事处三里桥东城街道
+				</td>
+				<td align="center"></td>
+				<td align="center">13666778899</td>
+				<td align="left">东城办卫生院</td>
+				<td align="center" >
+									
+									
+									
+									
+									 
+					         		居民基本医疗保险&nbsp;
+					         		
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									</td>
+				<td align="center">
+				 
+				 
+				
+				已签约
+				
+				
+				</td>
+				<!--2019-12-24 签约团队-->
+				<td align="left"></td>
+				 <td align="left"></td>
+				
+				<td align="center">东城卫生院</td>
+				<td align="left">2020-12-03 16:00:13</td>
+				<td align="left">
+					
+						
+							<span>活动</span>
+						
+						
+					
+				</td>
+				<td style="display:none" class="aaa"></td>
+		 	</tr>
+			
+		
+  		 
+	   </table>
+	   </div>
+       
+        <div id="page" class="page"><div id="page" class="page_and_btn">	<ul>
+<li style="float:left" >总数：1</li>
+	<li style="float:left" class="pageinfo">首页</li>
+	<li style="float:left" class="pageinfo">上页</li>
+<li style="float:left" class="current">1</li>
+	<li style="float:left" class="pageinfo">下页</li>
+	<li style="float:left" class="pageinfo">尾页</li>
+	<li style="float:left" class="pageinfo">共1页</li>
+ <li style="float:left" ><a href="javascript:void(0)" onclick="hunterPageContrlNextJump()" style="width:40px;">跳转到</a> </li>
+ <li style="float:left" ><input type='text' id='num' size='1'style="border:1px solid " /> </li>
+ <input type='hidden' id='all' value='1'/> 
+</ul>
+</div></div><script type="text/javascript">
+                $.ajaxSetup({ cache: false });
+                function nextPage(page) {
+                    var forms = $("#tdaJkdaRkxzl");
+                    if (true && forms) {
+                        var url = forms.attr('action');
+                        if (url.indexOf('?') > -1) { url += "&page.currentPage="; }
+                        else { url += "?page.currentPage="; }
+                        url += page + "&status=ajax";
+                        selfAlert("信息查询中..."); $("#subContent").load(url, $('#tdaJkdaRkxzl').serialize(), function () { remove(); });
+                    } else {
+                        var url = window.location.pathname + window.location.search + '';
+                        if (url.indexOf('?') > -1) {
+                            if (url.indexOf('#@') > 0) {
+                                url = url.replace('#@', '');
+                            }
+                            if (url.indexOf('currentPage') > -1) {
+                                var reg = /currentPage=\d*/g;
+                                url = url.replace(reg, 'currentPage=');
+                            } else {
+                                url += "&page.currentPage=";
+                            }
+                        } else { url += "?page.currentPage="; }
+                        url += page + "&status=ajax";
+                        $("#subContent").load(url);
+                    }
+                }
+                function hunterPageContrlNextJump() {
+                    var jumpPageNumber = document.getElementById('num').value;
+                    if (jumpPageNumber == '') {
+                        alert('未输入页码！');
+                        nextPage(1);
+                        return;
+                    }
+                    var lastPageNumber = Number(document.getElementById('all').value);
+                    if ((!Number(jumpPageNumber))) {
+                        alert('输入错误,只能输入数值！');
+                        nextPage(1);
+                        return;
+                    }
+                    if (Number(jumpPageNumber) < 1) {
+                        alert('输入错误,只能输入正数！');
+                        nextPage(1);
+                        return;
+                    }
+                    if (Number(jumpPageNumber) <= Number(lastPageNumber)) {
+                        if (Number(jumpPageNumber) == 1) {
+                            nextPage(1);
+                        } else {
+                            nextPage(Number(jumpPageNumber));
+                        }
+                    } else {
+                        alert('超过最大页数！');
+                        nextPage(1);
+                    }
+                }
+</script>
+
+        
+        <!--[if IE 6]> 
+				<table width="100%" style="boder:0">
+					<tr><td></td></tr>
+					<tr><td></td></tr>
+					<tr><td></td></tr>
+					<tr><td></td></tr>
+					<tr><td></td></tr>
+					<tr><td></td></tr>
+				</table>
+			<![endif]-->
+        
+        
+  </body>
+</html>

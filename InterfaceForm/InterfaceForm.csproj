@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18D4CD76-C7B0-49B9-B54A-3A993021636D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InterfaceForm</RootNamespace>
+    <AssemblyName>InterfaceForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluorineFx, Version=1.0.0.15, Culture=neutral, PublicKeyToken=1875756ba09931ab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EXLibrary\FluorineFx.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EXLibrary\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="NPOI">
+      <HintPath>..\EXLibrary\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="tessnet2_32, Version=2.0.4.0, Culture=neutral, PublicKeyToken=1550524b5ba07e29, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EXLibrary\tessnet2_32.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="tmpe\eng.DangAmbigs" />
+    <None Include="tmpe\eng.freq-dawg" />
+    <None Include="tmpe\eng.inttemp" />
+    <None Include="tmpe\eng.normproto" />
+    <None Include="tmpe\eng.pffmtable" />
+    <None Include="tmpe\eng.unicharset" />
+    <None Include="tmpe\eng.user-words" />
+    <None Include="tmpe\eng.word-dawg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Business\BaseBusiness\BaseBusiness.csproj">
+      <Project>{9cadc522-f5d5-4ea5-beb3-9bb8da1ffa51}</Project>
+      <Name>BaseBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\CommonBusiness\CommonBusiness.csproj">
+      <Project>{e9c191bf-afc3-4a53-ac99-b47576699373}</Project>
+      <Name>CommonBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\GrdaBusiness\GrdaBusiness.csproj">
+      <Project>{8FD255F2-0C76-4607-A2A6-B820281C374A}</Project>
+      <Name>GrdaBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\GxbBusiness\GxbBusiness.csproj">
+      <Project>{70805D02-6CC1-489A-9414-9D9C56AC61E8}</Project>
+      <Name>GxbBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\GxyBusiness\GxyBusiness.csproj">
+      <Project>{B3C6C89A-6DC5-4469-B9F1-BF97150503F4}</Project>
+      <Name>GxyBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\JtBusiness\JtBusiness.csproj">
+      <Project>{87B501E6-35A3-4010-A60F-B2AE8ED08DCD}</Project>
+      <Name>JtBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\LnrBusiness\LnrBusiness.csproj">
+      <Project>{E7681F54-1FB7-40FB-A2FA-1A005BFD701B}</Project>
+      <Name>LnrBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\NczBusiness\NczBusiness.csproj">
+      <Project>{86C278C2-3AD6-4A45-9FBA-99166FD2916A}</Project>
+      <Name>NczBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\TjBusiness\TjBusiness.csproj">
+      <Project>{78375E08-276B-46D0-8E62-3627438C9059}</Project>
+      <Name>TjBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Business\TnbBusiness\TnbBusiness.csproj">
+      <Project>{BD9E095E-91CF-45AA-8955-F162E2C1CE1C}</Project>
+      <Name>TnbBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\DAL\DAL\DAL.csproj">
+      <Project>{A525B97B-B2B3-43A8-9D66-DDFA9AE9D3FE}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Model\Model.InfoModel\Model.InfoModel.csproj">
+      <Project>{2C218EF5-15A9-48DF-B241-695DA8AC0775}</Project>
+      <Name>Model.InfoModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Model\Model.JsonModel\Model.JsonModel.csproj">
+      <Project>{F48114BC-964E-409D-A693-BE4A8FABF5AD}</Project>
+      <Name>Model.JsonModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Utilities\Utilities.Common\Utilities.Common.csproj">
+      <Project>{7E11B21F-D88D-47E7-B82C-4B4370F1331C}</Project>
+      <Name>Utilities.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="HTMLPage2.htm" />
+    <Content Include="HTMLPage3.htm" />
+    <Content Include="HTMLPage4.htm" />
+    <Content Include="HTMLPage5.htm" />
+    <Content Include="HTMLPage6.htm" />
+    <Content Include="ico\QC.ico" />
+    <Content Include="logo.ico" />
+    <None Include="Resources\选择人员.png" />
+    <None Include="Resources\全部人员.png" />
+    <None Include="Resources\清空.png" />
+    <None Include="Resources\查询.png" />
+    <None Include="Resources\登录.png" />
+    <None Include="Resources\标题.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\EXLibrary\FluorineFx.dll" />
+    <Analyzer Include="..\EXLibrary\HtmlAgilityPack.dll" />
+    <Analyzer Include="..\EXLibrary\tessnet2_32.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

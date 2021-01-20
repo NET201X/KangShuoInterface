@@ -1,0 +1,1302 @@
+﻿ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<meta http-equiv="Cache-Control" content="no-store"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jquery/jquery-1.7.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/lhgdialog/lhgdialog.min.js?self=false&skin=discuz" charset="UTF-8"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/check.js" charset="UTF-8"></script>  
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/main.js"></script>   
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/ztree/js/jquery.ztree.core-3.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/common/common.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/My97DatePicker/WdatePicker.js"></script> 
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jqueryValidate/jquery.validate.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jqueryValidate/jquery.metadata.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jqueryValidate/additional-methods.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jqueryValidate/messages_cn.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jqueryValidate/jquery.validate.castom.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/card.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/wordexcel.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jgjy.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/selfAlert.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jquery/jquery.bgiframe.js"></script>
+<script language="javascript" type="text/javascript" src="http://20.1.1.79:9081/sdcsm/js/jquery/jquery.PrintArea.js"></script>
+<script language="javascript" type="text/javascript">
+    function tz(url) {
+        var api = frameElement.api;
+        if (api != null && api != '') {
+            var W = api.opener;
+        }
+        $("#mainContent", top.window.document).attr("src", "/sdcsm" + url);
+    }
+</script>
+<script type="text/javascript">
+    var dqdlyhsgjg = "371481B10001";
+    function setWidth() {
+        T = $("#tableWrapper1");
+        B = $("#tableWrapper2");
+        T.width() > B.width() ? B.width(T.width()) : T.width(B.width());
+    }
+    setWidth();
+    window.onresize = function () {
+        T = $("#tableWrapper1");
+        B = $("#tableWrapper2");
+        T.width() > B.width() ? B.width(T.width()) : T.width(B.width());
+    };
+    window.onload = function () {
+        var radios = document.getElementsByTagName("input");
+        for (var i = 0; i < radios.length; i++) {
+            //alert(radios[i].ondblclick);
+            if (radios[i].type == "radio" && radios[i].ondblclick == null) {
+                radios[i].ondblclick = function () {
+                    this.checked = false;
+                }
+            }
+        }
+    };
+    window.onmousewheel = document.onmousewheel = function () {
+        var radios = document.getElementsByTagName("input");
+        for (var i = 0; i < radios.length; i++) {
+            radios[i].blur();
+        }
+        //alert($("body",top.document).html());
+        $("#chedan", top.window.document).hide();
+    };
+    $(window).scroll(function () {//è§¦åæ»å¨æ¡äºä»¶ï¼å¹¶ç»å®ä¸ä¸ªäºä»¶å½æ°
+        var bodyTop = 0;
+        if (typeof window.pageYOffset != 'undefined') {
+            bodyTop = window.pageYOffset; //æçæ¯æ»å¨æ¡é¡¶é¨å°ç½é¡µé¡¶é¨çè·ç¦»
+            //document.body.scrollTopæ»å¨æ¡é¡¶é¨å°ç½é¡µé¡¶é¨çè¿æ®µè·ç¦»
+        } else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat') {
+            bodyTop = document.documentElement.scrollTop;
+        } else if (typeof document.body != 'undefined') {
+            bodyTop = document.body.scrollTop;
+        }
+        // è®¾ç½®å±çCSSæ ·å¼ä¸­çtopå±æ§, æ³¨æè¦æ¯å°åï¼è¦ç¬¦åâæ åâ
+        $("#qqonline").css("top", bodyTop);
+        // // è®¾ç½®å±çå
+å®¹ï¼è¿éåªæ¯æ¾ç¤ºå½åçscrollTop
+        //$("#qqonline").text(bodyTop);
+        $("#light").css("top", bodyTop);
+        $("#lightycf").css("top", bodyTop);
+    });
+    function dykj() {
+        var Sys = '';
+        var ua = navigator.userAgent.toLowerCase();
+        if ("0" == "1") {
+            if (window.ActiveXObject) {
+                Sys = ua.match(/msie ([\d.]+)/)[1];
+                if (Sys < 7) {
+                    $("#licenceButton").html("");
+                }
+            } else if (document.getBoxObjectFor) {
+                Sys = ua.match(/firefox\/([\d.]+)/)[1];
+                $("#licenceButton").html("");
+            } else if (window.MessageEvent && !document.getBoxObjectFor) {
+                Sys = ua.match(/chrome\/([\d.]+)/)[1];
+                $("#licenceButton").html("");
+            } else if (window.opera) {
+                Sys = ua.match(/opera.([\d.]+)/)[1];
+                $("#licenceButton").html("");
+            } else if (window.openDatabase) {
+                Sys = ua.match(/version\/([\d.]+)/)[1];
+                $("#licenceButton").html("");
+            }
+        } else (
+    	$("#licenceButton").html("")
+    )
+    }
+</script>
+ 
+ 
+ 
+ 
+<meta http-equiv="Cache-Control" content="no-store"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<script language="javascript" type="text/javascript">
+    function setQxzbc(pram, sl) {
+        //alert(pram.length);
+        for (var i = 0; i < pram.length; i++) {
+            if (pram[i].checked == true) {
+                sl = sl - 1;
+                break;
+            }
+        }
+        return sl;
+    }
+    function setQxzbcFz(pram, val, sl, qt) {
+        var as = val.split(":");
+        var fieldvalue = qt.split(":");
+        if (as.length == fieldvalue.length) {
+            for (var i = 0; i < pram.length; i++) {
+                var k = 0;
+                for (var j = 0; j < fieldvalue.length; j++) {
+                    k++;
+                    if (pram[i].checked == true && pram[i].value == as[j]) {
+
+                        if (document.getElementById(fieldvalue[j]).value != '') {
+                            sl = sl - 1;
+                            k = 0;
+                            break;
+                        } else {
+                            k = 100000000;
+                            break;
+                        }
+
+                    }
+                }
+                if (k == fieldvalue.length && pram[i].checked == true) {
+                    sl = sl - 1;
+                    break;
+                }
+                if (k < fieldvalue.length) {
+                    break;
+                }
+            }
+        } else {
+            for (var i = 0; i < pram.length; i++) {
+                if (pram[i].checked == true && pram[i].value == val) {
+                    var q = 0;
+                    for (var j = 0; j < fieldvalue.length; j++) {
+                        if (document.getElementById(fieldvalue[j]).value != '') {
+                            q++;
+                        }
+                    }
+                    if (q == fieldvalue.length) {
+                        sl = sl - 1;
+                        break;
+                    }
+                }
+                if (pram[i].checked == true && pram[i].value != val) {
+                    sl = sl - 1;
+                    break;
+                }
+            }
+        }
+
+        return sl;
+    }
+    function setQxz(qxz) {
+        var qxzold = qxz;
+
+        if ('1' == '1') {
+            if ('0' == '0') {//å
+³ç³»ä¸ºâ0âè¡¨ç¤ºç¬ç«å­æ®µï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæ å
+³
+                if ('1' == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                    if (document.getElementById("dcslx").value != "") {
+                        qxz = qxz - 1;
+                    }
+                } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                    qxz = setQxzbc(document.getElementsByName('dcslx'), qxz);
+                }
+            } else if ('0' == '1') {//å
+³ç³»ä¸ºâ1âï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæå
+³
+
+                if ('1' == '2') {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+
+                    qxz = setQxzbcFz(document.getElementsByName('dcslx'), '0', qxz, '无');
+                } else if ('1' == '1') {
+
+                    if (document.getElementById("dcslx").value != "") {
+                        if (document.getElementById("dcslx").value == '0') {
+                            if ('无' == '2') {
+
+                                qxz = setQxzbc(document.getElementsByName('无'), qxz);
+                            } else {
+                                var aslength = 0;
+                                var as = '无'.split(":");
+                                for (var i = 0; i < as.length; i++) {
+                                    if (document.getElementById(as[i]).value != "") {
+                                        aslength++;
+                                    }
+                                }
+                                if (aslength == as.length) {
+                                    qxz = qxz - 1;
+                                }
+                            }
+                        } else {
+                            qxz = qxz - 1;
+                        }
+                    }
+                }
+
+            } else if ('0' == '2') {//å
+³ç³»ä¸ºâ2âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâæâï¼åªè¦å
+¶ä¸­ä¸ä¸ªä¸ä¸ºç©ºå°±å¯ä»¥
+
+                var as = '无'.split(":");
+                var fieldtype = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (fieldtype[i] == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                        if (document.getElementById(as[i]).value != "") {
+                            qxz = qxz - 1;
+                            break;
+                        }
+                    } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                        var qxz1 = setQxzbc(document.getElementsByName(as[i]), qxz);
+                        if (qxz1 != qxz) {
+                            qxz = qxz1;
+                            break;
+                        }
+
+                    }
+                }
+            } else if ('0' == '3') {//å
+³ç³»ä¸ºâ3âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâå¹¶ä¸âï¼ææé½ä¸ä¸ºç©ºæå¯ä»¥
+                var aslength = 0;
+                var as = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (document.getElementById(as[i]).value != "") {
+                        aslength++;
+                    }
+                }
+                if (aslength == as.length) {
+                    qxz = qxz - 1;
+                }
+            } else if ('0' == '4') {//å
+³ç³»ä¸ºâ4âï¼è¯¥å­æ®µçå®æ´åº¦åæ·»å éè¡¨çæ°æ®æå
+³ï¼å¯ä»¥æ·»å å¤æ¡æ°æ®ï¼ï¼éè¿å¤æ­tableè¡æ°çå¤å°å¤æ­å®æ´åº¦
+                var oPanel = document.getElementById("dcslx");
+                var aChildren = oPanel.rows;
+                if (aChildren.length > '0') {
+                    qxz = qxz - 1;
+                }
+            }
+        }
+
+        if ('1' == '1') {
+            if ('0' == '0') {//å
+³ç³»ä¸ºâ0âè¡¨ç¤ºç¬ç«å­æ®µï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæ å
+³
+                if ('1' == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                    if (document.getElementById("djzmj").value != "") {
+                        qxz = qxz - 1;
+                    }
+                } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                    qxz = setQxzbc(document.getElementsByName('djzmj'), qxz);
+                }
+            } else if ('0' == '1') {//å
+³ç³»ä¸ºâ1âï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæå
+³
+
+                if ('1' == '2') {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+
+                    qxz = setQxzbcFz(document.getElementsByName('djzmj'), '0', qxz, '无');
+                } else if ('1' == '1') {
+
+                    if (document.getElementById("djzmj").value != "") {
+                        if (document.getElementById("djzmj").value == '0') {
+                            if ('无' == '2') {
+
+                                qxz = setQxzbc(document.getElementsByName('无'), qxz);
+                            } else {
+                                var aslength = 0;
+                                var as = '无'.split(":");
+                                for (var i = 0; i < as.length; i++) {
+                                    if (document.getElementById(as[i]).value != "") {
+                                        aslength++;
+                                    }
+                                }
+                                if (aslength == as.length) {
+                                    qxz = qxz - 1;
+                                }
+                            }
+                        } else {
+                            qxz = qxz - 1;
+                        }
+                    }
+                }
+
+            } else if ('0' == '2') {//å
+³ç³»ä¸ºâ2âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâæâï¼åªè¦å
+¶ä¸­ä¸ä¸ªä¸ä¸ºç©ºå°±å¯ä»¥
+
+                var as = '无'.split(":");
+                var fieldtype = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (fieldtype[i] == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                        if (document.getElementById(as[i]).value != "") {
+                            qxz = qxz - 1;
+                            break;
+                        }
+                    } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                        var qxz1 = setQxzbc(document.getElementsByName(as[i]), qxz);
+                        if (qxz1 != qxz) {
+                            qxz = qxz1;
+                            break;
+                        }
+
+                    }
+                }
+            } else if ('0' == '3') {//å
+³ç³»ä¸ºâ3âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâå¹¶ä¸âï¼ææé½ä¸ä¸ºç©ºæå¯ä»¥
+                var aslength = 0;
+                var as = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (document.getElementById(as[i]).value != "") {
+                        aslength++;
+                    }
+                }
+                if (aslength == as.length) {
+                    qxz = qxz - 1;
+                }
+            } else if ('0' == '4') {//å
+³ç³»ä¸ºâ4âï¼è¯¥å­æ®µçå®æ´åº¦åæ·»å éè¡¨çæ°æ®æå
+³ï¼å¯ä»¥æ·»å å¤æ¡æ°æ®ï¼ï¼éè¿å¤æ­tableè¡æ°çå¤å°å¤æ­å®æ´åº¦
+                var oPanel = document.getElementById("djzmj");
+                var aChildren = oPanel.rows;
+                if (aChildren.length > '0') {
+                    qxz = qxz - 1;
+                }
+            }
+        }
+
+        if ('1' == '1') {
+            if ('0' == '0') {//å
+³ç³»ä¸ºâ0âè¡¨ç¤ºç¬ç«å­æ®µï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæ å
+³
+                if ('1' == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                    if (document.getElementById("drjsr").value != "") {
+                        qxz = qxz - 1;
+                    }
+                } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                    qxz = setQxzbc(document.getElementsByName('drjsr'), qxz);
+                }
+            } else if ('0' == '1') {//å
+³ç³»ä¸ºâ1âï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæå
+³
+
+                if ('1' == '2') {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+
+                    qxz = setQxzbcFz(document.getElementsByName('drjsr'), '0', qxz, '无');
+                } else if ('1' == '1') {
+
+                    if (document.getElementById("drjsr").value != "") {
+                        if (document.getElementById("drjsr").value == '0') {
+                            if ('无' == '2') {
+
+                                qxz = setQxzbc(document.getElementsByName('无'), qxz);
+                            } else {
+                                var aslength = 0;
+                                var as = '无'.split(":");
+                                for (var i = 0; i < as.length; i++) {
+                                    if (document.getElementById(as[i]).value != "") {
+                                        aslength++;
+                                    }
+                                }
+                                if (aslength == as.length) {
+                                    qxz = qxz - 1;
+                                }
+                            }
+                        } else {
+                            qxz = qxz - 1;
+                        }
+                    }
+                }
+
+            } else if ('0' == '2') {//å
+³ç³»ä¸ºâ2âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâæâï¼åªè¦å
+¶ä¸­ä¸ä¸ªä¸ä¸ºç©ºå°±å¯ä»¥
+
+                var as = '无'.split(":");
+                var fieldtype = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (fieldtype[i] == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                        if (document.getElementById(as[i]).value != "") {
+                            qxz = qxz - 1;
+                            break;
+                        }
+                    } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                        var qxz1 = setQxzbc(document.getElementsByName(as[i]), qxz);
+                        if (qxz1 != qxz) {
+                            qxz = qxz1;
+                            break;
+                        }
+
+                    }
+                }
+            } else if ('0' == '3') {//å
+³ç³»ä¸ºâ3âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâå¹¶ä¸âï¼ææé½ä¸ä¸ºç©ºæå¯ä»¥
+                var aslength = 0;
+                var as = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (document.getElementById(as[i]).value != "") {
+                        aslength++;
+                    }
+                }
+                if (aslength == as.length) {
+                    qxz = qxz - 1;
+                }
+            } else if ('0' == '4') {//å
+³ç³»ä¸ºâ4âï¼è¯¥å­æ®µçå®æ´åº¦åæ·»å éè¡¨çæ°æ®æå
+³ï¼å¯ä»¥æ·»å å¤æ¡æ°æ®ï¼ï¼éè¿å¤æ­tableè¡æ°çå¤å°å¤æ­å®æ´åº¦
+                var oPanel = document.getElementById("drjsr");
+                var aChildren = oPanel.rows;
+                if (aChildren.length > '0') {
+                    qxz = qxz - 1;
+                }
+            }
+        }
+
+        if ('1' == '1') {
+            if ('0' == '0') {//å
+³ç³»ä¸ºâ0âè¡¨ç¤ºç¬ç«å­æ®µï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæ å
+³
+                if ('1' == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                    if (document.getElementById("dsfdb").value != "") {
+                        qxz = qxz - 1;
+                    }
+                } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                    qxz = setQxzbc(document.getElementsByName('dsfdb'), qxz);
+                }
+            } else if ('0' == '1') {//å
+³ç³»ä¸ºâ1âï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæå
+³
+
+                if ('1' == '2') {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+
+                    qxz = setQxzbcFz(document.getElementsByName('dsfdb'), '0', qxz, '无');
+                } else if ('1' == '1') {
+
+                    if (document.getElementById("dsfdb").value != "") {
+                        if (document.getElementById("dsfdb").value == '0') {
+                            if ('无' == '2') {
+
+                                qxz = setQxzbc(document.getElementsByName('无'), qxz);
+                            } else {
+                                var aslength = 0;
+                                var as = '无'.split(":");
+                                for (var i = 0; i < as.length; i++) {
+                                    if (document.getElementById(as[i]).value != "") {
+                                        aslength++;
+                                    }
+                                }
+                                if (aslength == as.length) {
+                                    qxz = qxz - 1;
+                                }
+                            }
+                        } else {
+                            qxz = qxz - 1;
+                        }
+                    }
+                }
+
+            } else if ('0' == '2') {//å
+³ç³»ä¸ºâ2âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâæâï¼åªè¦å
+¶ä¸­ä¸ä¸ªä¸ä¸ºç©ºå°±å¯ä»¥
+
+                var as = '无'.split(":");
+                var fieldtype = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (fieldtype[i] == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                        if (document.getElementById(as[i]).value != "") {
+                            qxz = qxz - 1;
+                            break;
+                        }
+                    } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                        var qxz1 = setQxzbc(document.getElementsByName(as[i]), qxz);
+                        if (qxz1 != qxz) {
+                            qxz = qxz1;
+                            break;
+                        }
+
+                    }
+                }
+            } else if ('0' == '3') {//å
+³ç³»ä¸ºâ3âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâå¹¶ä¸âï¼ææé½ä¸ä¸ºç©ºæå¯ä»¥
+                var aslength = 0;
+                var as = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (document.getElementById(as[i]).value != "") {
+                        aslength++;
+                    }
+                }
+                if (aslength == as.length) {
+                    qxz = qxz - 1;
+                }
+            } else if ('0' == '4') {//å
+³ç³»ä¸ºâ4âï¼è¯¥å­æ®µçå®æ´åº¦åæ·»å éè¡¨çæ°æ®æå
+³ï¼å¯ä»¥æ·»å å¤æ¡æ°æ®ï¼ï¼éè¿å¤æ­tableè¡æ°çå¤å°å¤æ­å®æ´åº¦
+                var oPanel = document.getElementById("dsfdb");
+                var aChildren = oPanel.rows;
+                if (aChildren.length > '0') {
+                    qxz = qxz - 1;
+                }
+            }
+        }
+
+        if ('1' == '1') {
+            if ('0' == '0') {//å
+³ç³»ä¸ºâ0âè¡¨ç¤ºç¬ç«å­æ®µï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæ å
+³
+                if ('1' == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                    if (document.getElementById("dzflx").value != "") {
+                        qxz = qxz - 1;
+                    }
+                } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                    qxz = setQxzbc(document.getElementsByName('dzflx'), qxz);
+                }
+            } else if ('0' == '1') {//å
+³ç³»ä¸ºâ1âï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæå
+³
+
+                if ('1' == '2') {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+
+                    qxz = setQxzbcFz(document.getElementsByName('dzflx'), '0', qxz, '无');
+                } else if ('1' == '1') {
+
+                    if (document.getElementById("dzflx").value != "") {
+                        if (document.getElementById("dzflx").value == '0') {
+                            if ('无' == '2') {
+
+                                qxz = setQxzbc(document.getElementsByName('无'), qxz);
+                            } else {
+                                var aslength = 0;
+                                var as = '无'.split(":");
+                                for (var i = 0; i < as.length; i++) {
+                                    if (document.getElementById(as[i]).value != "") {
+                                        aslength++;
+                                    }
+                                }
+                                if (aslength == as.length) {
+                                    qxz = qxz - 1;
+                                }
+                            }
+                        } else {
+                            qxz = qxz - 1;
+                        }
+                    }
+                }
+
+            } else if ('0' == '2') {//å
+³ç³»ä¸ºâ2âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâæâï¼åªè¦å
+¶ä¸­ä¸ä¸ªä¸ä¸ºç©ºå°±å¯ä»¥
+
+                var as = '无'.split(":");
+                var fieldtype = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (fieldtype[i] == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                        if (document.getElementById(as[i]).value != "") {
+                            qxz = qxz - 1;
+                            break;
+                        }
+                    } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                        var qxz1 = setQxzbc(document.getElementsByName(as[i]), qxz);
+                        if (qxz1 != qxz) {
+                            qxz = qxz1;
+                            break;
+                        }
+
+                    }
+                }
+            } else if ('0' == '3') {//å
+³ç³»ä¸ºâ3âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâå¹¶ä¸âï¼ææé½ä¸ä¸ºç©ºæå¯ä»¥
+                var aslength = 0;
+                var as = '无'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (document.getElementById(as[i]).value != "") {
+                        aslength++;
+                    }
+                }
+                if (aslength == as.length) {
+                    qxz = qxz - 1;
+                }
+            } else if ('0' == '4') {//å
+³ç³»ä¸ºâ4âï¼è¯¥å­æ®µçå®æ´åº¦åæ·»å éè¡¨çæ°æ®æå
+³ï¼å¯ä»¥æ·»å å¤æ¡æ°æ®ï¼ï¼éè¿å¤æ­tableè¡æ°çå¤å°å¤æ­å®æ´åº¦
+                var oPanel = document.getElementById("dzflx");
+                var aChildren = oPanel.rows;
+                if (aChildren.length > '0') {
+                    qxz = qxz - 1;
+                }
+            }
+        }
+
+        if ('1' == '1') {
+            if ('3' == '0') {//å
+³ç³»ä¸ºâ0âè¡¨ç¤ºç¬ç«å­æ®µï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæ å
+³
+                if ('1' == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                    if (document.getElementById("ss").value != "") {
+                        qxz = qxz - 1;
+                    }
+                } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                    qxz = setQxzbc(document.getElementsByName('ss'), qxz);
+                }
+            } else if ('3' == '1') {//å
+³ç³»ä¸ºâ1âï¼è¯¥å­æ®µçå®æ´åº¦åå
+¶ä»å­æ®µæå
+³
+
+                if ('1' == '2') {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+
+                    qxz = setQxzbcFz(document.getElementsByName('ss'), '0', qxz, 'dcyl:dcyanl');
+                } else if ('1' == '1') {
+
+                    if (document.getElementById("ss").value != "") {
+                        if (document.getElementById("ss").value == '0') {
+                            if ('1:1' == '2') {
+
+                                qxz = setQxzbc(document.getElementsByName('dcyl:dcyanl'), qxz);
+                            } else {
+                                var aslength = 0;
+                                var as = 'dcyl:dcyanl'.split(":");
+                                for (var i = 0; i < as.length; i++) {
+                                    if (document.getElementById(as[i]).value != "") {
+                                        aslength++;
+                                    }
+                                }
+                                if (aslength == as.length) {
+                                    qxz = qxz - 1;
+                                }
+                            }
+                        } else {
+                            qxz = qxz - 1;
+                        }
+                    }
+                }
+
+            } else if ('3' == '2') {//å
+³ç³»ä¸ºâ2âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâæâï¼åªè¦å
+¶ä¸­ä¸ä¸ªä¸ä¸ºç©ºå°±å¯ä»¥
+
+                var as = 'dcyl:dcyanl'.split(":");
+                var fieldtype = '1:1'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (fieldtype[i] == '1') {//æä¸¤ç§æ
+åµï¼âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼textãtextareaãselect
+                        if (document.getElementById(as[i]).value != "") {
+                            qxz = qxz - 1;
+                            break;
+                        }
+                    } else {//âå­æ®µç±»åâï¼fieldtypeï¼ä¸ºï¼radioãcheckbox
+                        var qxz1 = setQxzbc(document.getElementsByName(as[i]), qxz);
+                        if (qxz1 != qxz) {
+                            qxz = qxz1;
+                            break;
+                        }
+
+                    }
+                }
+            } else if ('3' == '3') {//å
+³ç³»ä¸ºâ3âï¼è¯¥å­æ®µçå®æ´åº¦åå¤ä¸ªå­æ®µæå
+³ï¼èä¸è¿äºå­æ®µçå
+³ç³»ä¸ºâå¹¶ä¸âï¼ææé½ä¸ä¸ºç©ºæå¯ä»¥
+                var aslength = 0;
+                var as = 'dcyl:dcyanl'.split(":");
+                for (var i = 0; i < as.length; i++) {
+                    if (document.getElementById(as[i]).value != "") {
+                        aslength++;
+                    }
+                }
+                if (aslength == as.length) {
+                    qxz = qxz - 1;
+                }
+            } else if ('3' == '4') {//å
+³ç³»ä¸ºâ4âï¼è¯¥å­æ®µçå®æ´åº¦åæ·»å éè¡¨çæ°æ®æå
+³ï¼å¯ä»¥æ·»å å¤æ¡æ°æ®ï¼ï¼éè¿å¤æ­tableè¡æ°çå¤å°å¤æ­å®æ´åº¦
+                var oPanel = document.getElementById("ss");
+                var aChildren = oPanel.rows;
+                if (aChildren.length > '0') {
+                    qxz = qxz - 1;
+                }
+            }
+        }
+
+        var qxzwzd = new Array();
+        qxzwzd.push(qxz);
+        var re = /([0-9]+\.[0-9]{2})[0-9]*/;
+        var wzd = (qxzold - qxz) / qxzold * 100 + "";
+        var wzd1 = 100;
+        if (qxzold != 0) {
+            wzd1 = ForDight((qxzold - qxz) / qxzold * 100 + "", 0);
+        }
+        //var wzd1 = ForDight((qxzold-qxz)/qxzold*100+"",0);
+        //qxzwzd.push(wzd.replace(re,"$1"));
+        qxzwzd.push(wzd1);
+        return qxzwzd;
+    }
+    function ForDight(Dight, How) {
+        Dight = Math.round(Dight * Math.pow(10, How)) / Math.pow(10, How);
+        return Dight;
+    }  
+	</script>
+ 
+ 
+<link href="/sdcsm/css/main.css" rel="stylesheet" type="text/css" />
+ 
+<link rel="stylesheet" href="/sdcsm/js/ztree/css/demo.css" type="text/css">
+<link rel="stylesheet" href="/sdcsm/js/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<style type="text/css"> 
+	#qqonline {
+		background-color:#d1e9ec;
+		border: 0px solid #fcc;
+		position: absolute;
+		top: 0px;
+		width: 84%;
+	}
+			.Notice{
+				margin:20px auto;
+				width:950px;
+				padding:10px;
+				border:1px solid #ccc;
+				text-align:left;
+				background:#fff;
+			}
+			.NoticeTable{
+				border:#77bfb0 solid 2px;
+				margin:0px auto;
+				margin-top:0px;
+				border-collapse:collapse;
+			}
+			.NoticeTable td {
+				padding:3px 3px;
+				border-bottom:#d4dddc solid 1px;
+				border-right:#d4dddc solid 1px;
+			}
+			.dark {
+				background:#eaf4f6
+			}
+			.dark2 {
+				background:#f6f6f6
+			}
+</style>
+ 
+ 
+ 
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    
+    <title>家庭基本信息查看</title>
+    <link rel="stylesheet" type="text/css" href="/sdcsm/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/sdcsm/css/input.css">
+    <link rel="stylesheet" type="text/css" href="/sdcsm/css/index.css">
+    <script type="text/javascript">
+
+        var djtdabh = '3714810100705164';
+        var initurl = "/sdcsm/home/homeshow.action?djtdabh=" + djtdabh;
+        var p;
+        function edithzgx() {
+            var flag = $("#jtcyxs").is(":hidden");
+            //if(flag){
+            //$("#jtcyxs").show();
+            //$("#jtcyxg").hide();
+            // }else{
+            //$("#jtcyxs").hide();
+            //$("#jtcyxg").show();
+            //}
+            if (!flag) {
+                $("#jtcyxs").hide();
+                $("#jtcyxg").show();
+            }
+        }
+
+        function editjtxx() {
+            var flag = $("#jtinfoxs").is(":hidden");
+            //if(flag){
+            // $("#jtinfoxg").hide();
+            //$("#jtinfoxs").show();
+            // }else{
+            // $("#jtinfoxg").show();
+            //$("#jtinfoxs").hide();
+            //}
+            if (!flag) {
+                $("#jtinfoxg").show();
+                $("#jtinfoxs").hide();
+            }
+        }
+
+        function reset() {
+            $('form')[0].reset();
+            $('form')[1].reset();
+        }
+
+        function bodyinit() {
+            var success = '';
+            if (success != null && success != '' && success.length > 0 && success != "家庭成员户主注销成功！") {
+                alert(success);
+            }
+            if (success == "家庭成员户主注销成功！") {
+                alert(success);
+                $("#mainContent", top.window.document).attr("src", initurl);
+            }
+        }
+
+        function save() {
+            var flag = $("#jtcyxg").is(":hidden");
+            var infoflag = $("#jtinfoxg").is(":hidden");
+            if (!flag) {
+                var cygs = '1';
+                var j = 0;
+                var k = 0;
+                for (var i = 1; i <= cygs; i++) {
+                    if ($("#dYhzgx" + i).val() == "1") {
+                        j = j + 1;
+                    }
+                    if ($("#dYhzgx" + i).val() == "") {
+                        k++;
+                    }
+                }
+                if (j != 1) {
+                    if (j < 1)
+                        alert("对不起，您必须选择一个人为户主！");
+                    else
+                        alert("对不起，您只能选择一个人作为户主！");
+                } else {
+                    if (k != 0) {
+                        alert("对不起，您必须选择所有人的'与户主关系'！");
+                    } else {
+                        $("#homeinfo").submit();
+                    }
+                }
+            }
+            if (!infoflag) {
+                if (validateForm().form()) {
+                    var qxzwzd = setQxz('6');
+                    $("#qdqxz").attr("value", qxzwzd[0]);
+                    $("#wzd").attr("value", qxzwzd[1]);
+                    $("#tdaJtda").submit();
+                } else {
+                    alert("表单信息验证未通过，请修改表单信息！");
+                }
+
+            }
+        }
+
+        function jtgxzx(dGrdabh, dJtdabh, dYhzgx) {
+            var jtcygs = '1';
+            var url = '/sdcsm/home/hzgxzx.action?dGrdabh=' + dGrdabh + '&dJtdabh=' + dJtdabh + '&dYhzgx=' + dYhzgx + '&jtcygs=' + jtcygs;
+            document.forms[0].action = url;
+            if (dYhzgx == '1') {
+                if (jtcygs > 1) {
+                    if (confirm("该人是家庭户主，您必须指定该家庭中另一个人为户主，您确定要注销该家庭成员吗？")) {
+                        var url1 = 'url:/sdcsm/home/jthzzx.action?dGrdabh=' + dGrdabh + '&dJtdabh=' + dJtdabh + '&dYhzgx=' + dYhzgx + '&jtcygs=' + jtcygs;
+                        p = $.dialog({
+                            title: '户主注销',
+                            content: url1,
+                            cancelVal: '关闭',
+                            cancel: function () {
+                                $("#mainContent", top.window.document).attr("src", initurl);
+                            }
+                        });
+                    }
+                } else {
+                    if (confirm("该人是家庭户主，您注销该户主将连同家庭档案一同删除，您是否继续？")) {
+                        document.forms[0].submit();
+                    }
+                }
+            } else {
+                if (confirm("您确定要注销该家庭成员吗？")) {
+                    document.forms[0].submit();
+                }
+            }
+        }
+        function zhuanchu(dGrdabh, dJtdabh, dYhzgx) {
+            var jtcygs = '1';
+
+            if (dYhzgx == '1') {
+                if (jtcygs > 1) {
+                    alert("此人是户主，需要修改户主关系，指定一成员为户主");
+                    return false;
+                }
+            }
+            var url = '/sdcsm/home/hzgxzx.action?dGrdabh=' + dGrdabh + '&dJtdabh=' + dJtdabh + '&dYhzgx=' + dYhzgx + '&jtcygs=' + jtcygs;
+            document.forms[0].action = url;
+            p = $.dialog({
+                title: '家庭转出',
+                content: 'url:' + '/sdcsm/home/zhuanchulist.action?jtdabh=' + dJtdabh + '&dgrdabh=' + dGrdabh,
+                width: '700px',
+                height: '350px'
+            });
+        }
+        function validateForm() {
+            //alert($("#tdaJtda"));
+            return $("#tdaJtda").validate({
+                rules: {
+                    djzmj: { required: true, isNumber: true },
+                    drjsr: { required: true, stringMaxLength: 10, number: true },
+                    dcyl: { required: true, isNumber: true },
+                    dcyanl: { required: true, stringMaxLength: 5, number: true }
+                }
+            });
+        }
+        function tz(url) {
+            var api = frameElement.api;
+            if (api != null && api != '') {
+                var W = api.opener;
+            }
+            $("#mainContent", top.window.document).attr("src", "/sdcsm" + url);
+        }
+
+        function checkHappentime(name, obj) {
+
+            var birth = ""
+            if (birth == "") {
+                return true;
+            }
+            ymd1 = birth.split("-");
+            month1 = ymd1[1] - 1;
+            var Date1 = new Date(ymd1[0], month1, ymd1[2]);
+            if (obj.value == "") {
+                return true;
+            }
+            ymd2 = obj.value.split("-");
+            month2 = ymd2[1] - 1;
+            var Date2 = new Date(ymd2[0], month2, ymd2[2]);
+            if (Date1 > Date2) {
+                alert(name + "不能小于出生时间！");
+                obj.value = "";
+                obj.focus();
+                return false;
+            }
+        }
+        function checkDate(name, obj) {
+            if (obj.value == "") {
+                return true;
+            }
+            ymd1 = obj.value.split("-");
+            month1 = ymd1[1] - 1;
+            var Date1 = new Date(ymd1[0], month1, ymd1[2]);
+            var now = new Date();
+            if (Date1.getMonth() + 1 != ymd1[1] || Date1.getDate() != ymd1[2] || Date1.getFullYear() != ymd1[0] || ymd1[0].length != 4) {
+                alert(name + "是非法日期,请依【YYYY-MM-DD】格式输入");
+                obj.value = "";
+                obj.focus();
+                return false;
+            }
+            if (Date1 > now) {
+                alert(name + "不能大于当前时间！");
+                obj.value = "";
+                obj.focus();
+                return false;
+            }
+            return true;
+        }
+        function whztz() {
+            var jth = "3714810100705164";
+            if (jth == null || jth == "") {
+                var api = frameElement.api;
+                if (api != null && api != '') {
+                    var W = api.opener;
+                }
+                $("#mainContent", top.window.document).attr("src", "/sdcsm" + "/healthArchives/showGr.action?dGrdabh=371481010070516401");
+            }
+        }
+			
+			
+    </script>
+ 
+  </head>
+  
+  <body onload="validateForm(),bodyinit(),whztz()">
+   <div id="qqonline"  style="height:30px;">
+    <ul class="buttonStyle">
+    <li >
+    	<button type="button"  class="buttonInput2" onclick="editjtxx()">修改家庭信息</button>&nbsp;
+    </li>
+    <li >
+    <button type="button"  class="buttonInput2" onclick="edithzgx()">修改户主关系</button>&nbsp;
+	</li>
+    <li >
+    	<button type="button"  class="buttonInput2" onclick="tz('/home/homeAddJtcy.action?dJtdabh=3714810100705164')">转入家庭成员</button>
+    </li>
+    </ul>
+   </div>
+    <div class="tableContainer  shadow">
+ 
+	<div align="center">
+	<div id="jtcyxs" style="display:block">
+	  <table border="0" width="800" cellspacing="0" cellpadding="0">
+					<tr>
+						<td style="height: 30px;">
+							
+						</td>
+					</tr>
+				</table>
+				<table border="0" width="800" cellspacing="0" cellpadding="0">
+					<tr>
+						<td style="height: 30px;">
+							
+						</td>
+					</tr>
+				</table>
+	  <table border="0" width="650" cellspacing="0" cellpadding="0" id="table1" class="QueryTable3" >
+           
+           <tr>
+	        <td colspan="7" align="center" class="dark"><div class="title_size">家庭基本信息查看
+            </div></td>
+        </tr>
+            
+            <tr>
+	        <td colspan="7" align="left">考核项：6 缺项：0 完整度：100%</br>家庭成员一览表：</td>
+        </tr>
+            
+        <tr>
+          <td align="center" class="dark">序号</td>
+          <td align="center" class="dark">与户主关系</td>
+          <td align="center" class="dark" width="15%">姓名</td>
+          <td align="center" class="dark">性别</td>
+          <td align="center" class="dark" width="16%">出生日期 </td>
+          <td align="center" class="dark">居住状况</td>
+          <td align="center" class="dark">操作</td>
+        </tr>
+        
+        <tr>
+          <td align="center" class="dark2">1</td>
+          <td align="center" class="dark2" name="yhzgx1"><span>户主</span></td>
+          <td align="center" class="dark2">高凤英</td>
+          <td align="center" class="dark2"><span>女</span></td>
+          <td align="center" class="dark2">1964-12-06 </td>
+          <td align="center" class="dark2"><span>本地户籍常住</span></td>
+          <td align="center" class="dark2">
+          <a href="javascript:;" onclick="jtgxzx('371481010070516401','3714810100705164','1')">注销</a>
+          &nbsp;&nbsp;<a href="#" onclick="zhuanchu('371481010070516401','3714810100705164','1')">转出</a>
+          </td>
+        </tr>
+        
+        </table>
+        </div>
+        
+        <div id="jtcyxg" style="display:none">
+        <form name="homeinfo" id="homeinfo" action="/sdcsm/home/hzgxxg.action" method="post">
+        <table border="0" width="800" cellspacing="0" cellpadding="0">
+					<tr>
+						<td style="height: 50px;">
+							
+						</td>
+					</tr>
+				</table>
+        <input type="hidden" name="dJtdabh" id="dJtdabh" value="3714810100705164"/>
+        <input type="hidden" name="jtcygs" value="1"/>
+        <table border="0" width="650" cellspacing="0" cellpadding="0" id="table1" class="QueryTable3" >
+           
+           <tr>
+	        <td colspan="7" align="center" class="dark"><div class="title_size">家庭基本信息查看
+            </div></td>
+        </tr>
+            
+            <tr>
+	        <td colspan="7" align="left">考核项：6缺项：0 完整度：100%</br>家庭成员一览表：</td>
+        </tr>
+            
+        <tr>
+          <td align="center" class="dark">序号</td>
+          <td align="center" class="dark">与户主关系</td>
+          <td align="center" class="dark" width="15%">姓名</td>
+          <td align="center" class="dark">性别</td>
+          <td align="center" class="dark" width="16%">出生日期 </td>
+          <td align="center" class="dark">居住状况</td>
+          <td align="center" class="dark">操作</td>
+        </tr>
+        
+        <tr>
+          <td align="center" class="dark2">1<input type="hidden" name="dGrdabh1" value="371481010070516401"/></td>
+          <td align="center" class="dark2" name="yhzgx1"><select name='dYhzgx1' style='width:100px' id='dYhzgx1'>
+			<option value=''>请选择</option><option value='1' selected='selected' >户主</option><option value='2'  >配偶</option><option value='3'  >子女</option><option value='4'  >(外)孙子女</option><option value='5'  >父母</option><option value='6'  >(外)祖父母 </option><option value='7'  >兄弟姐妹</option><option value='8'  >儿媳</option><option value='9'  >女婿</option><option value='10'  >孙子女</option><option value='11'  >侄子女</option><option value='12'  >曾孙子女</option><option value='13'  >祖父母</option><option value='99'  >其他</option>
+		</select></td>
+          <td align="center" class="dark2">高凤英</td>
+          <td align="center" class="dark2"><span>女</span></td>
+          <td align="center" class="dark2">1964-12-06 </td>
+          <td align="center" class="dark2"><span>本地户籍常住</span></td>
+          <td align="center" class="dark2">
+          <a href="javascript:;" onclick="jtgxzx('371481010070516401','3714810100705164','1')">注销</a>
+           &nbsp;&nbsp;<a href="#" onclick="zhuanchu('371481010070516401','3714810100705164','1')">转出</a>
+          </td>
+        </tr>
+        
+        </table>
+			<button type="button"  class="buttonInput2" onclick="save()">保存修改</button>        </form>
+        </div>
+        <table><tr><td height="3"></td></tr></table>
+        
+        <div id="jtinfoxg" style="display:none">
+        <form id="tdaJtda" name="tdaJtda" action="/sdcsm/home/homeInfoSave.action" method="post">
+ 
+        <table border="0" width="650" cellspacing="0" cellpadding="0" id="table1" class="QueryTable3" >
+         <input type="hidden" name="wzd" id="wzd"/>
+        <input type="hidden" name="qdqxz" id="qdqxz"/>
+        <tr>
+          <input id="djtdabh" name="djtdabh" name="djtdabh" type="hidden" value="3714810100705164"/>
+          <td  align="center" class="dark" width="1%"><div class="change_ys">住房类型</div></td>
+          <td colspan="2"><select name='dzflx' style='width:100px' id='dzflx'>
+			<option value=''>请选择</option><option value='1'  >平房</option><option value='2' selected='selected' >楼房</option>
+		</select></td>
+		  <td  align="center" class="dark" width="12%"><div class="change_ys">住房面积</div></td>
+          <td colspan="3"><input id="djzmj" name="djzmj" class="input_5" name="djzmj" type="text" value="110.0"/>㎡</td>
+        </tr>
+        
+        <tr>
+		  <td  align="center" class="dark" width="1%"><div class="change_ys">厕所类型</div></td>
+          <td colspan="6" class="dark2"><select name='dcslx' style='width:120px' id='dcslx'>
+			<option value=''>请选择</option><option value='1'  >坐式抽水式马桶</option><option value='2' selected='selected' >蹲式冲水式厕所</option><option value='3'  >公共厕所</option><option value='99'  >其他</option>
+		</select></td>
+        </tr>
+        
+        <tr>
+		  <td  align="center" class="dark" width="1%"><div class="change_ys">家庭人均月收入</div></td>
+          <td colspan="2"><input id="drjsr" name="drjsr" class="input_5" name="drjsr" type="text" value="0.0"/>元</td>
+		  <td  align="center" class="dark" width="1%"><div class="change_ys">是否低保户</div></td>
+          <td colspan="3"><select name='dsfdb' style='width:100px' id='dsfdb'>
+			<option value=''>请选择</option><option value='1'  >是</option><option value='2' selected='selected' >否</option>
+		</select></td>
+        </tr>
+        
+        <tr>
+		  <td  align="center" class="dark" width="24%"><div class="change_ys">家庭通常每个月吃油盐量</div></td>
+          <td colspan="6" class="dark2"><input id="dcyl" name="dcyl" class="input_5" name="dcyl" type="text" value="0.0"/>斤植物油/月<input id="dcyanl" name="dcyanl" class="input_5" name="dcyanl" type="text" value="0.0"/>克盐/月</td>
+        </tr>
+             
+       <tr>
+          <td class="dark">创建时间: </td>
+          <td colspan="2">
+              2018-05-24
+         
+		  </td>
+          <td class="dark">录入时间：</td>
+          <td colspan="3">2018-05-25 14:03:09</td>
+        </tr>
+          
+          <tr>
+          <td class="dark">最近更新时间: </td>
+          <td class="dark2" colspan="2">2018-05-25 14:12:56</td>
+          <td class="dark">创建机构: </td>
+          <td class="dark2" colspan="3">安居社区卫生服务站</td>
+          </tr>
+          
+          <tr>
+          <td class="dark">录入人:</td>
+          <td colspan="2">安居社区卫生服务站</td>
+          <td class="dark">最近修改人: </td>
+          <td colspan="3">安居社区卫生服务站</td>
+          </tr>
+          
+          <tr>
+          <td class="dark">当前所属机构:</td>
+          <td colspan="6" class="dark2">安居社区卫生服务站</td>
+          </tr>  
+       
+          
+      </table>
+      <button type="button"  class="buttonInput2" onclick="save()">保存修改</button>
+      </form>
+      </div>
+      
+      <div id="jtinfoxs" style="display:block">
+        <table border="0" width="650" cellspacing="0" cellpadding="0" id="table1" class="QueryTable3" >
+        <tr>
+          <td  align="center" class="dark" width="1%"><div class="change_ys">住房类型</div></td>
+          <td colspan="2"><span>楼房</span></td>
+		  <td  align="center" class="dark" width="12%"><div class="change_ys">住房面积</div></td>
+          <td colspan="3">110.0㎡</td>
+        </tr>
+        
+        <tr>
+		  <td  align="center" class="dark" width="1%"><div class="change_ys">厕所类型</div></td>
+          <td colspan="6" class="dark2"><span>蹲式冲水式厕所</span></td>
+        </tr>
+        
+        <tr>
+		  <td  align="center" class="dark" width="1%"><div class="change_ys">家庭人均月收入</div></td>
+          <td colspan="2">0.0元</td>
+		  <td  align="center" class="dark" width="1%"><div class="change_ys">是否低保户</div></td>
+          <td colspan="3"><span>否</span></td>
+        </tr>
+        
+        <tr>
+		  <td  align="center" class="dark" width="24%"><div class="change_ys">家庭通常每个月吃油盐量</div></td>
+          <td colspan="6" class="dark2">0.0斤植物油/月0.0克盐/月</td>
+        </tr>
+             
+       <tr>
+          <td class="dark">创建时间: </td>
+          <td colspan="2">2018-05-24</td>
+          <td class="dark">录入时间：</td>
+          <td colspan="3">2018-05-25 14:03:09</td>
+        </tr>
+          
+          <tr>
+          <td class="dark">最近更新时间: </td>
+          <td class="dark2" colspan="2">2018-05-25 14:12:56</td>
+          <td class="dark">创建机构: </td>
+          <td class="dark2" colspan="3">安居社区卫生服务站</td>
+          </tr>
+          
+          <tr>
+          <td class="dark">录入人:</td>
+          <td colspan="2">安居社区卫生服务站</td>
+          <td class="dark">最近修改人: </td>
+          <td colspan="3">安居社区卫生服务站</td>
+          </tr>
+          
+          <tr>
+          <td class="dark">当前所属机构:</td>
+          <td colspan="6" class="dark2">安居社区卫生服务站</td>
+          </tr>  
+       
+          
+      </table>
+      </div>
+ 
+  </div>
+  </div>
+ 
+<table height="10"></table>
+  </body>
+</html>
+

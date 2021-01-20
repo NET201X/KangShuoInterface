@@ -1,0 +1,3377 @@
+﻿
+	<div id="qqonline" class="btndiv">
+		<ul class="buttonStyle">
+			<li><button type="button"  class="buttonInput2" onclick="save();">保存</button>
+			</li>
+			<li>
+				<button type="button" class="buttonInput2"
+					onclick="window.open('/sdcsm/tbsmHtml/JiankangtijianXXtbsm.html');">
+					填表说明</button>
+			</li>
+			<li id="tiqu" name="tiqu">
+				<button type="button" class="buttonInput2" onclick="tiqu();">
+					提取数据</button>
+			</li>
+
+			<li><button type="button"  class="buttonInput2" onclick="importDiabetesInfo();">上传体检信息</button></li>
+		</ul>
+	</div>
+	<div class="tableContainer shadow pad15table">
+		<div align="center" id="page1">
+
+				<form name="tjkJktjForm" id="tjkJktjForm" action="/sdcsm/health/healthSave.action" method="post">
+					
+					<!-- 考核项隐藏域 -->
+					<input type="hidden" name="timeflag" id="timeflag"
+						value="">
+					<input type="hidden" name="qdqxz" id="qdqxz"
+						value="">
+					<input type="hidden" name="wzd" id="wzd" value="">
+					<input type="hidden" name="dSfzh" id="dSfzh" value="372427194709303929"> 
+					<input type="hidden" name="id" id="id" value=""> 
+					
+					<input type="hidden" name="upjktjFlag" id="upjktjFlag" value="0"> 
+					<table border="0" cellspacing="0" cellpadding="0" id="table2" class="QueryTable3 coticeTable">
+						<tr>
+							<td colspan="6" align="center" class="dark">
+								<div class="title_size">
+									健康体检表
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td align="center" width="12%" class="dark">
+								<input type="hidden" value="" name="status" />
+								个人档案号
+							</td>
+							<td width="20%">
+								371481110110015802
+								<input type="hidden" value="371481110110015802" name="dGrdabh" />
+							</td>
+							<td align="center" width="12%" class="dark">
+								姓名
+							</td>
+							<td width="20%">
+								郭宝荣
+							</td>
+							<td align="center" width="12%" class="dark">
+								性别
+							</td>
+							<td >
+								<span>女</span>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								身份证号
+							</td>
+							<td >
+								372427194709303929
+							</td>
+							<td align="center" class="dark">
+								出生日期
+							</td>
+							<td>
+								<input type="hidden" name="tjkInfo.dCsrq" id="csrq" value="1947-09-30"/>
+								1947-09-30
+							</td>
+							<td align="center" class="dark">
+								联系电话
+							</td>
+							<td>
+								15066629944
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								居住地址
+							</td>
+							<td colspan="5">
+								山东省
+								德州市
+								乐陵市
+								丁坞镇
+								万家
+								丁坞镇万家
+							</td>
+						</tr>
+					</table>
+					<table border="0" ccellspacing="0" cellpadding="0" id="table5" class="QueryTable3 coticeTable" style="border-top: 0;border-bottom: 0">
+						<tr>
+							<td  align="center" class="dark" colspan="2"><div class="change_ys">体检日期</div></td>
+							<td  colspan="2">
+								<input type="text" name="happentime" id="happentime"
+									onchange="checkDate('体检日期',this),checkHappentime('体检日期',this),tqsjdisplay()"
+									size="20" class="Wdate"
+									onclick="WdatePicker({dateFmt:'yyyy-MM-dd',skin:'default'})"
+									value="2020-12-14" />
+							</td>
+							<td  align="center" class="dark" colspan="2"><div class="change_ys">责任医生</div></td>
+							<td  colspan="3">
+								
+									<input type="text" name="0257c63255bb41e39e47099595fec740" id="0257c63255bb41e39e47099595fec740" style="display:none;"/>
+								
+									<input type="text" name="4deee883033c40efb066bed43159c58c" id="4deee883033c40efb066bed43159c58c" style="display:none;"/>
+								
+									<input type="text" name="8850d880cfb34677b0ab9ea0f71e3231" id="8850d880cfb34677b0ab9ea0f71e3231" style="display:none;"/>
+								
+									<input type="text" name="742ac3acf0bb4cb6b507818e528010db" id="742ac3acf0bb4cb6b507818e528010db" style="display:none;"/>
+								
+								<input type="text" name="GHX6c07e84c4e90439ea50b2e2c72310abb" id="GHX6c07e84c4e90439ea50b2e2c72310abb" size="20"
+									class="input_5" value="" onchange="fuzhi('GHX6c07e84c4e90439ea50b2e2c72310abb','field2')"/>
+								<input type="hidden" name="field2" id="field2" style="display:none;"/>
+								<!-- 
+								<input type="text" name="field2" id="field2" size="20"
+									class="input_5" value="">
+								 -->
+							</td>
+							
+						</tr>
+						<tr>
+							<td align="center" colspan="2" class="dark">
+								内 容
+							</td>
+							<td colspan="6" align="center" class="dark" width="76%" >
+								检查项目
+							</td>
+							<td class="dark" nowrap>医师签名</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark" colspan="2"><div class="change_ys">症状</div></td>
+							<td colspan="6" >
+								<input type="checkbox" id="gZhzh" name="gZhzh"  checked="checked"  value="1" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>无症状</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="2" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>头痛</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="3" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>头晕</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="4" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>心悸</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="5" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>胸闷</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="6" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>胸痛</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="7" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>慢性咳嗽</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="8" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>咳痰</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="9" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>呼吸困难</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="10" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>多饮</span><br/><input type="checkbox" id="gZhzh" name="gZhzh"  value="11" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>多尿</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="12" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>体重下降</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="13" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>乏力</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="14" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>关节肿痛</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="15" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>视力模糊</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="16" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>手脚麻木</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="17" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>尿急</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="18" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>尿痛</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="19" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>便秘</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="20" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>腹泻</span><br/><input type="checkbox" id="gZhzh" name="gZhzh"  value="21" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>恶心呕吐</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="22" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>眼花</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="23" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>耳鸣</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="24" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>乳房胀痛</span><input type="checkbox" id="gZhzh" name="gZhzh"  value="99" onclick="zdzcqtpb('gZhzh','1','99','gZzqt');"/><span>其他</span>
+								<input type="text" name="gZzqt" id="gZzqt" size="20"
+									class="input_5" value="" disabled />
+							</td>
+								<td class="dark"> 
+						 <div class="qzbr"    id="tjzkysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     	  
+        </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjzkysqm" size="2"  value=""   style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+         <div style="display: none;"><object id="sigCtl1" style="width:50mm;height:35mm"
+          type="application/x-florentis-signature"></object></div>  
+         <input  type="hidden"  id="tjzkysqminp"   class="input_5 qzbr" name="tjzkysqm"  value="" /> 
+        		
+									
+									</td>
+				
+						</tr>
+						<tr>
+							
+								
+									
+								
+								
+							
+							<td class="dark" align="center" rowspan="9">一<br>般<br>情<br>况</td>
+							<td  align="center" class="dark"><div class="change_ys">体温</div></td>
+							<td colspan="2">
+								
+									<input type="text" name="e39191ac9c60409c8e3627c112eaee81" id="e39191ac9c60409c8e3627c112eaee81" style="display:none;"/>
+								
+								
+								<input type="text" name="oUZ364feacb96554d6695954fd1356f8773" id="oUZ364feacb96554d6695954fd1356f8773"  size="10" class="input_5 twc"
+									value="" onchange="fuzhi('oUZ364feacb96554d6695954fd1356f8773','gTw')"  oninput="moneyChange(this)"/>&nbsp;&#8451;
+								<input type="hidden" name="gTw" id="gTw" style="display:none;"/>
+								<!-- 
+								<input type="text" name="gTw" id="gTw" size="10" class="input_5"
+									value="" />
+								-->
+								
+							</td>
+							<td  align="center" class="dark" colspan="2"><div class="change_ys">脉率</div></td>
+							<td colspan="2">
+								<input type="text" name="gMb" id="gMb" size="10"
+									value="" class="input_5">
+								次/分钟
+							</td>
+													<td width="12%"  rowspan="9"  class="dark">
+													 
+									
+		<div class="qzbr"    id="tjybqkysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     	  
+        </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjybqkysqm" size="2" value=""  style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+         <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm"
+          type="application/x-florentis-signature"></object></div>  
+         <input  type="hidden"  id="tjybqkysqminp"   class="input_5 qzbr" name="tjybqkysqm"  value="" /> 
+        		
+									
+									
+									
+									
+									</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark" width="20" rowspan="2"><div class="change_ys">呼吸频率</div></td>
+							<td width="15%" rowspan="2" nowrap>
+								<input type="text" name="gHx" id="gHx" size="6" class="d_wb" 
+									value="" />
+								次/分钟
+							</td>
+							<td align="center" rowspan="2" class="dark" width="5%">血压</td>
+							<td  align="center" class="dark" width="5%"><div class="change_ys">左侧</div></td>
+							
+							<td  nowrap>
+								 
+								<input type="text" name="gXyzc1" id="gXyzc1" size="8"
+									value="" class="d_wb">
+								<span>/</span>
+								<input type="text" name="gXyzc2" id="gXyzc2" size="8"
+									value="" class="d_wb">
+								<span>mmHg</span>
+							</td>
+							<td align="center" class="dark">
+								左侧原因
+							</td>
+							<td class="td3" >
+								<input type="text" name="zcyy" id="zcyy" size="10"
+									class="input_5" value="" />
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">右侧</div></td>
+							</td>
+							<td>
+								
+									<input type="text" name="302c6b6d340b4ad89b2b7249997b8d58" id="302c6b6d340b4ad89b2b7249997b8d58" style="display:none;"/>
+								
+								<input type="text" name="Hmle108e35d6cff4f2ea93c46778a37aa06" id="Hmle108e35d6cff4f2ea93c46778a37aa06" size="8"
+									value="" class="d_wb" onchange="fuzhi('Hmle108e35d6cff4f2ea93c46778a37aa06','gXyyc1')"/><span>/</span>
+								
+									<input type="text" name="089a76a4d6564f4fb5115533cd749f2d" id="089a76a4d6564f4fb5115533cd749f2d" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="c_c410fdc376bfe4fc29a264656d00ec595" id="c_c410fdc376bfe4fc29a264656d00ec595" size="8"
+									value="" class="d_wb" onchange="fuzhi('c_c410fdc376bfe4fc29a264656d00ec595','gXyyc2')"/><span>mmHg</span>
+								<input type="hidden" name="gXyyc1" id="gXyyc1" style="display:none;"/>
+								<input type="hidden" name="gXyyc2" id="gXyyc2" style="display:none;"/>
+								<!-- 
+								<input type="text" name="gXyyc1" id="gXyyc1" size="10"
+									value="" class="d_wb">
+								<span>/</span>
+								<input type="text" name="gXyyc2" id="gXyyc2" size="10"
+									value="" class="d_wb">
+								 -->
+								
+							</td>
+							<td align="center" class="dark">
+								右侧原因
+							</td>
+							<td class="td3">
+								<input type="text" name="ycyy" id="ycyy" size="10"
+									class="input_5" value="" />
+								<input type="hidden" name="nrgxygl" id="nrgxygl" value="1" />
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">身高</div></td>
+							<td colspan="2">
+								
+								<input type="text" name="XJW5075a108b2a8433aa0eb27e81be34c1e" id="XJW5075a108b2a8433aa0eb27e81be34c1e" size="10"
+									value="" class="input_5" onchange="fuzhi('XJW5075a108b2a8433aa0eb27e81be34c1e','gSg')"
+									onblur="tzzs(this.value,$('#GMa43118361badd49dcaf734ba381975031').val(),this.id,'GMa43118361badd49dcaf734ba381975031','gTzhzh');" />&nbsp;cm
+								<input type="hidden" name="gSg" id="gSg" style="display:none;"/>
+								<!-- 
+								<input type="text" name="gSg" id="gSg" size="10"
+									value="" class="input_5"
+									onblur="tzzs(this.value,$('#gTzh').val(),this.id,'gTzh','gTzhzh');" />
+								 -->
+							</td>
+							<td  align="center" class="dark" colspan="2"><div class="change_ys">体重</div></td>
+							<td colspan="4">
+								
+									<input type="text" name="e5e9ecc14ca549a19984e726e4c190ba" id="e5e9ecc14ca549a19984e726e4c190ba" style="display:none;"/>
+								
+									<input type="text" name="382cfa94e37147aa8b06ccae6d898939" id="382cfa94e37147aa8b06ccae6d898939" style="display:none;"/>
+								
+									<input type="text" name="f13a4baef57e4e6da22bd10f9ae7b410" id="f13a4baef57e4e6da22bd10f9ae7b410" style="display:none;"/>
+								
+									<input type="text" name="87c21ca5e2ae46d6bc24befb3db4123b" id="87c21ca5e2ae46d6bc24befb3db4123b" style="display:none;"/>
+								
+									<input type="text" name="aff54a41828f49bf975c3a6b01e7a5de" id="aff54a41828f49bf975c3a6b01e7a5de" style="display:none;"/>
+								
+									<input type="text" name="09fc3d05c8354b3b96c85959c3f69b13" id="09fc3d05c8354b3b96c85959c3f69b13" style="display:none;"/>
+								
+									<input type="text" name="7ca2ce6c80fb46c494e98fac65335a05" id="7ca2ce6c80fb46c494e98fac65335a05" style="display:none;"/>
+								
+									<input type="text" name="475679f637fe4255876d4034fb3929bc" id="475679f637fe4255876d4034fb3929bc" style="display:none;"/>
+								
+								<input type="text" name="GMa43118361badd49dcaf734ba381975031" id="GMa43118361badd49dcaf734ba381975031" size="10"
+									value="" class="input_5" onchange="fuzhi('GMa43118361badd49dcaf734ba381975031','gTzh')"
+									onblur="tzzs($('#XJW5075a108b2a8433aa0eb27e81be34c1e').val(),this.value,'XJW5075a108b2a8433aa0eb27e81be34c1e',this.id,'gTzhzh');" />&nbsp;kg
+								<input type="hidden" name="gTzh" id="gTzh" style="display:none;"/>
+								<!-- 
+								<input type="text" name="gTzh" id="gTzh" size="10"
+									value="" class="input_5"
+									onblur="tzzs($('#gSg').val(),this.value,'gSg',this.id,'gTzhzh');" />
+								 -->
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">腰围</div></td>
+							<td colspan="2">
+								
+									<input type="text" name="aaf9078deabb4a17b988e7faf5ce5847" id="aaf9078deabb4a17b988e7faf5ce5847" style="display:none;"/>
+								
+									<input type="text" name="e2adc510f267420d8412c6d1bc98ca8c" id="e2adc510f267420d8412c6d1bc98ca8c" style="display:none;"/>
+								
+									<input type="text" name="d45451fca0024180abdfbe77ed882540" id="d45451fca0024180abdfbe77ed882540" style="display:none;"/>
+								
+									<input type="text" name="8200212eb4604731b769df6548451246" id="8200212eb4604731b769df6548451246" style="display:none;"/>
+								
+									<input type="text" name="fa8f9b8b366c4909bf363c4cc2be1436" id="fa8f9b8b366c4909bf363c4cc2be1436" style="display:none;"/>
+								
+									<input type="text" name="2f6a8e7c778b4dea8a6cee97305e9499" id="2f6a8e7c778b4dea8a6cee97305e9499" style="display:none;"/>
+								
+								<input type="text" name="m_f811ed3dc88e3494c835f96ca148e0b2b" id='m_f811ed3dc88e3494c835f96ca148e0b2b' value=""
+									size="10" class="input_5"  onchange="fuzhi('m_f811ed3dc88e3494c835f96ca148e0b2b','gYw')"/>&nbsp;cm
+								<input type="hidden" name="gYw" id='gYw' style="display:none;"/>
+								<!-- 
+								<input type="text" name="gYw" id='gYw' value=""
+									size="10" class="input_5" />
+								 -->
+							</td>
+							<td  align="center" class="dark" colspan="2"><div class="change_ys">体重指数(BMI)</div></td>
+							<td colspan="4">
+								<input type="text" name="gTzhzh" id="gTzhzh" size="10"
+									value="" size="20" class="input_5" readonly />
+								&nbsp;Kg/m2
+							</td>
+						</tr>
+						
+							<tr>
+								<td  align="center" class="dark">老年人健康状态自我评估*</td>
+								<td colspan="6" >
+									<input type="radio" id="lnrzkpg"  name="lnrzkpg" value="1"  onclick="null" />满意<input type="radio" id="lnrzkpg"  name="lnrzkpg" value="2"  onclick="null" />基本满意<input type="radio" id="lnrzkpg"  name="lnrzkpg" value="3"  onclick="null" />说不清楚<input type="radio" id="lnrzkpg"  name="lnrzkpg" value="4"  onclick="null" />不太满意<input type="radio" id="lnrzkpg"  name="lnrzkpg" value="5"  onclick="null" />不满意
+								</td>
+							</tr>
+							<tr>
+								<td  align="center" class="dark">老年人生活自理能力自我评估*</td>
+								<td colspan="6">
+									<input type="radio" id="lnrzlpg"  name="lnrzlpg" value="1"  onclick="null" />可自理(0～3分)<input type="radio" id="lnrzlpg"  name="lnrzlpg" value="2"  onclick="null" />轻度依赖(4～8分)<input type="radio" id="lnrzlpg"  name="lnrzlpg" value="3"  onclick="null" />中度依赖(9～18分)<input type="radio" id="lnrzlpg"  name="lnrzlpg" value="4"  onclick="null" />不能自理(≥19分)
+								</td>
+							</tr>
+							<tr>
+								<td  align="center" class="dark">老年人认知能力*</td>
+								<td colspan="6" >
+									<input type="radio" id="gLnrrz"  name="gLnrrz" value="1"  onclick="xyqkpb('gLnrrz','2','gLnrrzfen','gLnrrzfen');" />阴性<input type="radio" id="gLnrrz"  name="gLnrrz" value="2"  onclick="xyqkpb('gLnrrz','2','gLnrrzfen','gLnrrzfen');" />阳性
+									&nbsp;&nbsp;
+									简易智力状态检查,总分
+									<input type="text" name="gLnrrzfen" id="gLnrrzfen" size="10"
+										value="" class="d_wb" />
+								</td>
+							</tr>
+							<tr>
+								<td  align="center" class="dark">老年人情感状态*</td>
+								<td colspan="6">
+									<input type="radio" id="gLnrqg"  name="gLnrqg" value="1"  onclick="xyqkpb('gLnrqg','2','gLnrqgfen','gLnrqgfen');" />阴性<input type="radio" id="gLnrqg"  name="gLnrqg" value="2"  onclick="xyqkpb('gLnrqg','2','gLnrqgfen','gLnrqgfen');" />阳性
+									&nbsp;&nbsp;
+									老年人抑郁评分检查,总分
+									<input type="text" name="gLnrqgfen" id="gLnrqgfen"
+										value="" size="10" class="d_wb" />
+								</td>
+							</tr>
+						
+						<tr>
+							<td rowspan="13" align="center" class="dark">生<br>活<br>方<br>式</td>
+						<!-- 	<td colspan="8"></td>
+			
+						</tr>
+						<tr> -->
+							<td  align="center" class="dark" rowspan="3"><div class="change_ys">体育锻炼</div></td>
+							<td align="center" class="dark">
+								锻炼频率
+							</td>
+							<td colspan="5" >
+								<input type="radio" id="gDlpl"  name="gDlpl" value="1"  onclick="tydlpb('gDlpl','4','gMcdlsj@gJcdlsj@gDlfs');" />每天<input type="radio" id="gDlpl"  name="gDlpl" value="2"  onclick="tydlpb('gDlpl','4','gMcdlsj@gJcdlsj@gDlfs');" />每周一次以上<input type="radio" id="gDlpl"  name="gDlpl" value="3"  onclick="tydlpb('gDlpl','4','gMcdlsj@gJcdlsj@gDlfs');" />偶尔<input type="radio" id="gDlpl"  name="gDlpl" value="4"  checked onclick="tydlpb('gDlpl','4','gMcdlsj@gJcdlsj@gDlfs');" />不锻炼
+							</td>
+						
+							<td width="12%" rowspan="13" class="dark">
+							
+						<div class="qzbr"    id="tjshfsysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     	  
+        </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjshfsysqm" value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+         <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm"
+          type="application/x-florentis-signature"></object></div>  
+         <input  type="hidden"  id="tjshfsysqminp"   class="input_5 qzbr" name="tjshfsysqm"  value="" /> 
+        			
+							
+						</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								每次锻炼时间
+							</td>
+							<td colspan="2" >
+								<input type="text" name="gMcdlsj" id="gMcdlsj"
+									value="" size="10" class="d_wb" />
+								分钟
+							</td>
+							<td align="center" class="dark">
+								坚持锻炼时间
+							</td>
+							<td colspan="2">
+								<input type="text" name="gJcdlsj" id="gJcdlsj"
+									value="" size="10" class="d_wb" />
+								年
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								锻炼方式
+							</td>
+							<td colspan="5" >
+								<input type="text" name="gDlfs" id="gDlfs"
+									value="" size="20" class="input_5" />
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">饮食习惯</div></td>
+							<td colspan="6">
+								<input type="checkbox" id="gYsxg" name="gYsxg" value="1" onclick="null"/><span>荤素均衡</span><input type="checkbox" id="gYsxg" name="gYsxg" value="2" onclick="null"/><span>荤食为主</span><input type="checkbox" id="gYsxg" name="gYsxg" value="3" onclick="null"/><span>素食为主</span><input type="checkbox" id="gYsxg" name="gYsxg" value="4" onclick="null"/><span>嗜盐</span><input type="checkbox" id="gYsxg" name="gYsxg" value="5" onclick="null"/><span>嗜油</span><input type="checkbox" id="gYsxg" name="gYsxg" value="6" onclick="null"/><span>嗜糖</span>
+						</tr>
+						<tr>
+							<td  align="center" class="dark" rowspan="3"><div class="change_ys">吸烟情况</div></td>
+							<td align="center" class="dark">
+								吸烟状况
+							</td>
+							<td colspan="5" >
+								<input type="radio" id="gXyzk"  name="gXyzk" value="1"  checked onclick="xyqkpb('gXyzk','2=3','gRxyl@gKsxynl@gJynl=gRxyl@gKsxynl','gRxyl=gKsxynl=gJynl');" />从不吸烟<input type="radio" id="gXyzk"  name="gXyzk" value="2"  onclick="xyqkpb('gXyzk','2=3','gRxyl@gKsxynl@gJynl=gRxyl@gKsxynl','gRxyl=gKsxynl=gJynl');" />已戒烟<input type="radio" id="gXyzk"  name="gXyzk" value="3"  onclick="xyqkpb('gXyzk','2=3','gRxyl@gKsxynl@gJynl=gRxyl@gKsxynl','gRxyl=gKsxynl=gJynl');" />吸烟
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								日吸烟量
+							</td>
+							<td colspan="5">
+								平均
+								<input type="text" name="gRxyl" id="gRxyl"
+									value="" size="10" class="d_wb"/>（支）
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								开始吸烟年龄
+							</td>
+							<td  colspan="2">
+								<input type="text" name="gKsxynl" id="gKsxynl"
+									value="" size="10" class="d_wb"
+									onchange="bjjynl('gKsxynl','gJynl',this,'吸烟年龄不能大于戒烟年龄！');" />
+								岁
+							</td>
+							<td align="center" class="dark">
+								戒烟年龄
+							</td>
+							<td  colspan="2">
+								<input type="text" name="gJynl" id="gJynl"
+									value="" size="10" class="d_wb"
+									onchange="bjjynl('gKsxynl','gJynl',this,'吸烟年龄不能大于戒烟年龄！');" />
+								岁
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark" rowspan="5"><div class="change_ys">饮酒情况</div></td>
+							<td align="center" class="dark">
+								饮酒频率
+							</td>
+							<td colspan="5">
+								<input type="radio" id="gYjpl"  name="gYjpl" value="1"  checked onclick="tydlpb('gYjpl','1','gRyjl@gSfjj@gKsyjnl@gYnnsfyj@gYjzl');" />从不<input type="radio" id="gYjpl"  name="gYjpl" value="2"  onclick="tydlpb('gYjpl','1','gRyjl@gSfjj@gKsyjnl@gYnnsfyj@gYjzl');" />偶尔<input type="radio" id="gYjpl"  name="gYjpl" value="3"  onclick="tydlpb('gYjpl','1','gRyjl@gSfjj@gKsyjnl@gYnnsfyj@gYjzl');" />经常<input type="radio" id="gYjpl"  name="gYjpl" value="4"  onclick="tydlpb('gYjpl','1','gRyjl@gSfjj@gKsyjnl@gYnnsfyj@gYjzl');" />每天
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								日饮酒量
+							</td>
+							<td colspan="5" >
+								平均
+								<input type="text" name="gRyjl" id="gRyjl"
+									value="" size="10" class="d_wb"/>（两）
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								是否戒酒
+							</td>
+							<td colspan="2">
+								<input type="radio" id="gSfjj"  name="gSfjj" value="1"  checked onclick="xyqkpb('gSfjj','2','gJjnl','gJjnl');" />未戒酒<input type="radio" id="gSfjj"  name="gSfjj" value="2"  onclick="xyqkpb('gSfjj','2','gJjnl','gJjnl');" />已戒酒
+							</td>
+							<td align="center" class="dark">
+								戒酒年龄
+							</td>
+							<td colspan="2">
+								<input type="text" name="gJjnl" id="gJjnl"
+									value="" size="10" class="d_wb"
+									onchange="bjjynl('gKsyjnl','gJjnl',this,'戒酒年龄不能大于开始饮酒年龄！');" />
+								岁
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								开始饮酒年龄
+							</td>
+							<td  colspan="2">
+								<input type="text" name="gKsyjnl" id="gKsyjnl"
+									value="" size="10" class="d_wb"
+									onchange="bjjynl('gKsyjnl','gJjnl',this,'戒酒年龄不能大于开始饮酒年龄！');" />
+								岁
+							</td>
+							<td align="center" class="dark">
+								近一年内是否曾醉酒
+							</td>
+							<td  colspan="2">
+								<input type="radio" id="gYnnsfyj"  name="gYnnsfyj" value="1"  onclick="null" />是<input type="radio" id="gYnnsfyj"  name="gYnnsfyj" value="2"  onclick="null" />否
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								饮酒种类
+							</td>
+							<td colspan="5">
+								<input type="checkbox" id="null" name="gYjzl" value="1" onclick="xyqkpb('gYjzl','99','gYjzlqt','gYjzlqt');"/><span>白酒</span><input type="checkbox" id="null" name="gYjzl" value="2" onclick="xyqkpb('gYjzl','99','gYjzlqt','gYjzlqt');"/><span>啤酒</span><input type="checkbox" id="null" name="gYjzl" value="3" onclick="xyqkpb('gYjzl','99','gYjzlqt','gYjzlqt');"/><span>红酒</span><input type="checkbox" id="null" name="gYjzl" value="4" onclick="xyqkpb('gYjzl','99','gYjzlqt','gYjzlqt');"/><span>黄酒</span><input type="checkbox" id="null" name="gYjzl" value="99" onclick="xyqkpb('gYjzl','99','gYjzlqt','gYjzlqt');"/><span>其他</span>
+								<input type="text" name="gYjzlqt" id="gYjzlqt"
+									value="" size="10" class="input_5"/>
+							</td>
+						</tr>
+						<tr>							
+
+							<td colspan="7" style="padding:0;">
+								<table width="100%" border="0" class="new_tb2" cellspacing="0" cellpadding="0">
+									<tr>
+								<td  align="center" class="dark"><div class="change_ys">职业病危害因素接触史</div></td>
+										<td colspan="4" style="border-right:0; width:80%">
+											
+												
+													 <input type="radio" name="gYwzybl" id="gYwzybl" value="1" onclick="xyqkpb('gYwzybl','3','gJtzy@gCysj@fenchen@fchcs@gShexian@gSxfhcs@wuliyinsu@wlcs@gHxp@gHxpfhcs@blqita@blqtcs','gJtzy=gCysj=fenchen=fchcs=gShexian=gSxfhcs=wuliyinsu=wlcs=gHxp=gHxpfhcs=blqita=blqtcs');" checked/>无
+												
+											
+												
+											
+												
+													 <input type="radio" name="gYwzybl" id="gYwzybl" value="3" onclick="xyqkpb('gYwzybl','3','gJtzy@gCysj@fenchen@fchcs@gShexian@gSxfhcs@wuliyinsu@wlcs@gHxp@gHxpfhcs@blqita@blqtcs','gJtzy=gCysj=fenchen=fchcs=gShexian=gSxfhcs=wuliyinsu=wlcs=gHxp=gHxpfhcs=blqita=blqtcs');"/>有
+												
+											
+											(工种<input type="text" name="gJtzy" id="gJtzy"
+												value="" size="10" class="d_wb"/>
+											从业时间<input type="text" name="gCysj" id="gCysj"
+												value="" size="10" class="d_wb"/>年)
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" style="border-right:0;" class="dark">
+											毒物种类
+										</td>
+									</tr>
+									<tr>
+										<td align="center" class="dark">
+											粉尘
+										</td>
+										<td style="width:30%">
+											<input type="text" name="fenchen" id="fenchen"
+												value="" size="15" class="input_5" />
+										</td>
+										<td align="center" class="dark">
+											防护措施
+										</td>
+										<td style="width:30%">
+											
+												
+													 <input type="radio" name="fchcs" id="fchcs" value="1" onclick="xyqkpb('fchcs','3','fchy','fchy');" checked/>无
+												
+											
+												
+											
+												
+													 <input type="radio" name="fchcs" id="fchcs" value="3" onclick="xyqkpb('fchcs','3','fchy','fchy');"/>有
+												
+											
+										</td>
+										<td style="border-right:0;width:20%">
+											<input type="text" name="fchy" id="fchy"
+												value="" size="15" class="input_5"/>
+										</td>
+									</tr>
+
+										<tr>
+											<td align="center" class="dark">
+												放射物质
+											</td>
+											<td>
+												<input type="text" name="gShexian" id="gShexian"
+													value="" size="15" class="input_5" />
+											</td>
+											<td align="center" class="dark">
+												防护措施
+											</td>
+											<td>
+												
+													
+														 <input type="radio" name="gSxfhcs" id="gSxfhcs" value="1" onclick="xyqkpb('gSxfhcs','3','gSxfhcsqt','gSxfhcsqt');" checked/>无
+													
+												
+													
+												
+													
+														 <input type="radio" name="gSxfhcs" id="gSxfhcs" value="3" onclick="xyqkpb('gSxfhcs','3','gSxfhcsqt','gSxfhcsqt');"/>有
+													
+												
+											</td>
+											<td style="border-right:0;">
+												<input type="text" name="gSxfhcsqt" id="gSxfhcsqt"
+													value="" size="15" class="input_5"/>
+											</td>
+										</tr>
+
+										<tr>
+											<td align="center" class="dark">
+												物理因素
+											</td>
+											<td>
+												<input type="text" name="wuliyinsu" id="wuliyinsu"
+													value="" size="15" class="input_5" />
+											</td>
+											<td align="center" class="dark">
+												防护措施
+											</td>
+											<td>
+												
+													
+														 <input type="radio" name="wlcs" id="wlcs" value="1" onclick="xyqkpb('wlcs','3','wly','wly');" checked/>无
+													
+												
+													
+												
+													
+														 <input type="radio" name="wlcs" id="wlcs" value="3" onclick="xyqkpb('wlcs','3','wly','wly');"/>有
+													
+												
+											</td>
+											<td style="border-right:0;">
+												<input type="text" name="wly" id="wly"
+													value="" size="15" class="input_5"/>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" class="dark">
+												化学物质
+											</td>
+											<td>
+												<input type="text" name="gHxp" id="gHxp"
+													value="" size="15" class="input_5" />
+											</td>
+											<td align="center" class="dark">
+												防护措施
+											</td>
+											<td>
+												
+													
+														 <input type="radio" name="gHxpfhcs" id="gHxpfhcs" value="1" onclick="xyqkpb('gHxpfhcs','3','gHxpfhcsjt','gHxpfhcsjt');" checked/>无
+													
+												
+													
+												
+													
+														 <input type="radio" name="gHxpfhcs" id="gHxpfhcs" value="3" onclick="xyqkpb('gHxpfhcs','3','gHxpfhcsjt','gHxpfhcsjt');"/>有
+													
+												
+											</td>
+											<td style="border-right:0;">
+												<input type="text" name="gHxpfhcsjt" id="gHxpfhcsjt"
+													value="" size="15"
+													class="input_5"/>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" class="dark" style="border-bottom:0;">
+												其他
+											</td>
+											<td style="border-bottom:0;">
+												<input type="text" name="blqita" id="blqita"
+													value="" size="15" class="input_5" />
+											</td>
+											<td align="center" class="dark" style="border-bottom:0;">
+												防护措施
+											</td>
+											<td style="border-bottom:0;">
+												
+													
+														 <input type="radio" name="blqtcs" id="blqtcs" value="1" onclick="xyqkpb('blqtcs','3','qty','qty');" checked/>无
+													
+												
+													
+												
+													
+														 <input type="radio" name="blqtcs" id="blqtcs" value="3" onclick="xyqkpb('blqtcs','3','qty','qty');"/>有
+													
+												
+											</td>
+											<td style="border-right:0;border-bottom:0;">
+												<input type="text" name="qty" id="qty"
+													value="" size="15" class="input_5"/>
+											</td>
+								
+										</tr>
+								</table>
+							</td>
+						</tr>
+									
+						<tr>
+							<td rowspan="6" align="center" class="dark">
+								脏<br>器<br>功<br>能
+							</td>
+							<td rowspan="3" align="center" class="dark">口腔</td>
+							<td  align="center" class="dark"><div class="change_ys">口唇</div></td>
+							<td colspan="5">
+								<input type="radio" id="gKouchun"  name="gKouchun" value="1"  checked onclick="zdzcqtpb('gKouchun','no','6','kchqt');" />红润<input type="radio" id="gKouchun"  name="gKouchun" value="2"  onclick="zdzcqtpb('gKouchun','no','6','kchqt');" />苍白<input type="radio" id="gKouchun"  name="gKouchun" value="3"  onclick="zdzcqtpb('gKouchun','no','6','kchqt');" />发绀<input type="radio" id="gKouchun"  name="gKouchun" value="4"  onclick="zdzcqtpb('gKouchun','no','6','kchqt');" />皲裂<input type="radio" id="gKouchun"  name="gKouchun" value="5"  onclick="zdzcqtpb('gKouchun','no','6','kchqt');" />疱疹<input type="radio" id="gKouchun"  name="gKouchun" value="6"  onclick="zdzcqtpb('gKouchun','no','6','kchqt');" />其他
+								<input type="text" name="kchqt"	id="kchqt" value="" size="10" class="input_5"/>
+							</td>
+					<td  rowspan="6" class="dark">
+							
+		<div class="qzbr" id="tjzqgnysqm"  style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     	 
+        </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjzqgnysqm" size="2" value="" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+         <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm"
+          type="application/x-florentis-signature"></object></div>  
+         <input  type="hidden" id="tjzqgnysqminp" class="input_5 qzbr" name="tjzqgnysqm" value="" /> 
+							
+							</td>
+						</tr>
+						<tr>
+						
+							<td colspan="6" style="padding:0;margin:0">
+								<table class="bbgg2" cellspacing="0" cellpadding="0">
+									<tr>
+	<td  align="center" class="dark" rowspan="2"><div class="change_ys">齿列</div></td>
+										
+											
+												
+													<td class="01" style="width:30%"><input type="checkbox" name="gChilei" id="gChilei" value="1" onclick="chiliepb();" checked/>正常
+												
+												
+												
+												
+										
+										
+										
+											
+												
+												
+													<input type="checkbox" name="gChilei" id="gChilei" value="2" onclick="chiliepb();"/>缺齿</td>
+													<td class="01"  style="padding:0;margin:0;width:20%">
+														<table id="quechitb"  border="0" class="bbgg" width="100%" style="height:100%" cellspacing="0" cellpadding="0">
+															<tr>
+																<td class="ttd01">
+																	<input type="text" name="quechi1" id="quechi1"
+																		class="shu_zi" />
+																</td>
+																<td class="ttd02" style="border-right:0">
+																	<input type="text" name="quechi2" id="quechi2"
+																		class="shu_zi" />
+																</td>
+															</tr>
+															<tr>
+																<td class="ttd03"  style="border-bottom:0">
+																	<input type="text" name="quechi3" id="quechi3"
+																		class="shu_zi" />
+																</td>
+																<td class="ttd04"  style="border-right:0;border-bottom:0">
+																	<input type="text" name="quechi4" id="quechi4"
+																		class="shu_zi" />
+																</td>
+															</tr>
+														</table>
+													</td>
+												
+												
+												
+										
+										
+										
+											
+												
+												
+												
+													<td class="01">
+														<input type="checkbox" name="gChilei" id="gChilei" value="3" onclick="chiliepb();"/>龋齿
+													</td>
+													<td class="01" style="padding:0;margin:0;width:20%">
+														<table id="quchitb" border="0" class="bbgg" width="100%" cellspacing="0" cellpadding="0">
+															<tr>
+																<td class="ttd01">
+																	<input type="text" name="quchi1" id="quchi1"
+																		class="shu_zi" />
+																</td>
+																<td class="ttd02" style="border-right:0;">
+																	<input type="text" name="quchi2" id="quchi2"
+																		class="shu_zi" />
+																</td>
+															</tr>
+															<tr>
+																<td class="ttd03" style="border-bottom:0">
+																	<input type="text" name="quchi3" id="quchi3"
+																		class="shu_zi" />
+																</td>
+																<td class="ttd04" style="border-right:0;border-bottom:0">
+																	<input type="text" name="quchi4" id="quchi4"
+																		class="shu_zi" />
+																</td>
+															</tr>
+														</table>
+													</td>
+												
+												
+										
+										
+										
+											
+												
+												
+												
+												
+									</tr>
+									<tr>
+										<td class="01">
+											<input type="checkbox" name="gChilei" id="gChilei" value="4" onclick="chiliepb();"/>义齿(假牙)
+										</td>
+										<td class="01" style="padding:0;margin:0">
+											<table id="yichitb" border="0" class="bbgg"  width="100%" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="ttd01">
+														<input type="text" name="yichi1" id="yichi1"
+															class="shu_zi" />
+													</td>
+													<td class="ttd02">
+														<input type="text" name="yichi2" id="yichi2"
+															class="shu_zi" />
+													</td>
+												</tr>
+												<tr>
+													<td class="ttd03">
+														<input type="text" name="yichi3" id="yichi3"
+															class="shu_zi" />
+													</td>
+													<td class="ttd04">
+														<input type="text" name="yichi4" id="yichi4"
+															class="shu_zi" />
+													</td>
+												</tr>
+											</table>
+										</td>
+										
+										
+										
+										
+											
+												
+												
+												
+												
+										
+											<td colspan="2" class="01">
+												<input type="checkbox" name="gChilei" id="gChilei" value="5" onclick="chiliepb();"/>其他
+										
+										
+										
+										<input type="text" name="chlqt" id="chlqt"
+											value="" size="20" class="input_5" disabled/>
+										</td>
+									</tr>
+								</table>
+							</td>
+						
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">咽部</div></td>
+							<td colspan="5">
+								<input type="radio" id="gYanbu"  name="gYanbu" value="1"  checked onclick="zdzcqtpb('gYanbu','no','4','ybqt');" />无充血<input type="radio" id="gYanbu"  name="gYanbu" value="2"  onclick="zdzcqtpb('gYanbu','no','4','ybqt');" />充血<input type="radio" id="gYanbu"  name="gYanbu" value="3"  onclick="zdzcqtpb('gYanbu','no','4','ybqt');" />淋巴滤泡增生<input type="radio" id="gYanbu"  name="gYanbu" value="4"  onclick="zdzcqtpb('gYanbu','no','4','ybqt');" />其他
+								<input type="text" name="ybqt"
+										id="ybqt" value="" size="20" class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">视 力</div></td>
+							<td colspan="6" >
+								左眼
+								<input type="text" name="gZysl" id="gZysl"
+									value="" size="10" class="d_wb" onchange="gZyslfun()"/>
+								右眼
+								<input type="text" name="gYysl" id="gYysl"
+									value="" size="10" class="d_wb" />
+								（矫正视力：左眼
+								<input type="text" name="gZyjz" id="gZyjz"
+									value="" size="10" class="d_wb" />
+								右眼
+								<input type="text" name="gYyjz" id="gYyjz"
+									value="" size="10" class="d_wb" />
+								）
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">听 力</div></td>
+							<td colspan="6">
+								<input type="radio" id="gTl"  name="gTl" value="1"  checked onclick="null" />听见<input type="radio" id="gTl"  name="gTl" value="2"  onclick="null" />听不清或无法听见（耳鼻喉科专科就诊）
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">运动功能</div></td>
+							<td colspan="6" >
+								<input type="radio" id="gYdgn"  name="gYdgn" value="1"  checked onclick="null" />可顺利完成<input type="radio" id="gYdgn"  name="gYdgn" value="2"  onclick="null" />无法独立完成其中任何一个动作(上级医院就诊)
+							</td>
+						</tr>
+						<tr>
+							
+								
+									
+								
+								
+							
+							<td rowspan="25" align="center" class="dark">
+								查<br>体
+							</td>
+							<td  align="center" class="dark">眼 底*</td>
+							<td colspan="6">
+								<input type="radio" id="gYand"  name="gYand" value="1"  onclick="zdzcqtpb('gYand','no','2','gYandyi');" />正常<input type="radio" id="gYand"  name="gYand" value="2"  onclick="zdzcqtpb('gYand','no','2','gYandyi');" />异常
+								<input type="text" name="gYandyi"
+										id="gYandyi" value="" size="20"
+										class="input_5"/>
+							</td>
+							
+							<td width="12%" class="dark">
+							
+		<div class="qzbr"    id="tjyandiysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     	 
+        </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjyandiysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+         <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm"
+          type="application/x-florentis-signature"></object></div>  
+         <input  type="hidden"  id="tjyandiysqminp"   class="input_5 qzbr" name="tjyandiysqm"  value="" /> 
+		</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">皮 肤</div></td>
+							<td colspan="6" >
+								<input type="checkbox" id="gPfgm" name="gPfgm"  checked="checked"  value="1" onclick="zdzcqtpb('gPfgm','1','99','gPfqt');"/><span>正常</span><input type="checkbox" id="gPfgm" name="gPfgm"  value="2" onclick="zdzcqtpb('gPfgm','1','99','gPfqt');"/><span>潮红</span><input type="checkbox" id="gPfgm" name="gPfgm"  value="3" onclick="zdzcqtpb('gPfgm','1','99','gPfqt');"/><span>苍白</span><input type="checkbox" id="gPfgm" name="gPfgm"  value="4" onclick="zdzcqtpb('gPfgm','1','99','gPfqt');"/><span>发绀</span><input type="checkbox" id="gPfgm" name="gPfgm"  value="5" onclick="zdzcqtpb('gPfgm','1','99','gPfqt');"/><span>黄染</span><input type="checkbox" id="gPfgm" name="gPfgm"  value="6" onclick="zdzcqtpb('gPfgm','1','99','gPfqt');"/><span>色素沉着</span><input type="checkbox" id="gPfgm" name="gPfgm"  value="99" onclick="zdzcqtpb('gPfgm','1','99','gPfqt');"/><span>其他</span>
+								<input type="text" name="gPfqt"
+										id="gPfqt" value="" size="20" class="input_5"/>
+							</td>
+							
+							<td width="12%" class="dark" rowspan="16">
+							
+							<div class="qzbr"    id="tjchatiysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     	 
+        </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjchatiysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+         <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm"
+          type="application/x-florentis-signature"></object></div>  
+         <input  type="hidden"  id="tjchatiysqminp"   class="input_5 qzbr" name=tjchatiysqm  value="" /> 
+					
+										
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">巩 膜</div></td>
+							<td colspan="6">
+								<input type="checkbox" id="gGongmo" name="gGongmo"  checked="checked"  value="1" onclick="zdzcqtpb('gGongmo','1','99','gGmqt');"/><span>正常</span><input type="checkbox" id="gGongmo" name="gGongmo"  value="2" onclick="zdzcqtpb('gGongmo','1','99','gGmqt');"/><span>黄染</span><input type="checkbox" id="gGongmo" name="gGongmo"  value="3" onclick="zdzcqtpb('gGongmo','1','99','gGmqt');"/><span>充血</span><input type="checkbox" id="gGongmo" name="gGongmo"  value="99" onclick="zdzcqtpb('gGongmo','1','99','gGmqt');"/><span>其他</span>
+								<input type="text" name="gGmqt"
+										id="gGmqt" value="" size="20" class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">淋巴结</div></td>
+							<td colspan="6" >
+								<input type="checkbox" id="gLbj" name="gLbj"  checked="checked"  value="1" onclick="zdzcqtpb('gLbj','1','4','gLbjqt');"/><span>未触及</span><input type="checkbox" id="gLbj" name="gLbj"  value="2" onclick="zdzcqtpb('gLbj','1','4','gLbjqt');"/><span>锁骨上</span><input type="checkbox" id="gLbj" name="gLbj"  value="3" onclick="zdzcqtpb('gLbj','1','4','gLbjqt');"/><span>腋窝</span><input type="checkbox" id="gLbj" name="gLbj"  value="4" onclick="zdzcqtpb('gLbj','1','4','gLbjqt');"/><span>其他</span>
+								<input type="text" name="gLbjqt"
+										id="gLbjqt" value="" size="20"
+										class="input_5"/> 
+							</td>
+						</tr>
+						<tr>
+							<td align="center" rowspan="3" class="dark">肺</td>
+							<td  align="center" class="dark"><div class="change_ys">桶状胸：</div></td>
+							<td colspan="5" style="width:80%">
+								<input type="radio" id="gTzx"  name="gTzx" value="1"  onclick="null" />是<input type="radio" id="gTzx"  name="gTzx" value="2"  checked onclick="null" />否
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">呼吸音：</div></td>
+							<td colspan="5" >
+								<input type="radio" id="gHxy"  name="gHxy" value="1"  checked onclick="zdzcqtpb('gHxy','no','2','gHxyyc');" />正常<input type="radio" id="gHxy"  name="gHxy" value="2"  onclick="zdzcqtpb('gHxy','no','2','gHxyyc');" />异常
+								<input type="text" name="gHxyyc"
+										id="gHxyyc" value="" size="20"
+										class="input_5"/> 
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">罗 音：</div></td>
+							<td colspan="5">
+								<input type="checkbox" id="gLy" name="gLy"  checked="checked"  value="1" onclick="zdzcqtpb('gLy','1','4','gLyyc');"/><span>无</span><input type="checkbox" id="gLy" name="gLy"  value="2" onclick="zdzcqtpb('gLy','1','4','gLyyc');"/><span>干罗音</span><input type="checkbox" id="gLy" name="gLy"  value="3" onclick="zdzcqtpb('gLy','1','4','gLyyc');"/><span>湿罗音</span><input type="checkbox" id="gLy" name="gLy"  value="4" onclick="zdzcqtpb('gLy','1','4','gLyyc');"/><span>其他</span>
+								<input type="text" name="gLyyc"
+										id="gLyyc" value="" size="20" class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="3" align="center" class="dark">心 脏</td>
+							<td  align="center" class="dark"><div class="change_ys">心率：</div></td>
+							<td colspan="5" >
+								<input type="text" name="gXinlv" id="gXinlv"
+									value="" size="10" class="d_wb" />
+								次/分
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">心律：</div></td>
+							<td colspan="5">
+								<input type="radio" id="gXinlvci"  name="gXinlvci" value="1"  checked onclick="null" />齐<input type="radio" id="gXinlvci"  name="gXinlvci" value="2"  onclick="null" />不齐<input type="radio" id="gXinlvci"  name="gXinlvci" value="3"  onclick="null" />绝对不齐
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">杂音：</div></td>
+							<td colspan="5" >
+								<input type="radio" id="gZayin"  name="gZayin" value="1"  checked onclick="zdzcqtpb('gZayin','no','2','gZayinyo');" />无<input type="radio" id="gZayin"  name="gZayin" value="2"  onclick="zdzcqtpb('gZayin','no','2','gZayinyo');" />有
+								<input type="text" name="gZayinyo"
+										id="gZayinyo" value="" size="20"
+										class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" rowspan="5" class="dark">腹 部</td>
+							<td  align="center" class="dark"><div class="change_ys">压痛：</div></td>
+							<td colspan="5">
+								<input type="radio" id="gYato"  name="gYato" value="1"  checked onclick="zdzcqtpb('gYato','no','2','gYatoyo');" />无<input type="radio" id="gYato"  name="gYato" value="2"  onclick="zdzcqtpb('gYato','no','2','gYatoyo');" />有
+								<input type="text" name="gYatoyo"
+										id="gYatoyo" value="" size="20"
+										class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">包块：</div></td>
+							<td colspan="5" >
+								<input type="radio" id="gBk"  name="gBk" value="1"  checked onclick="zdzcqtpb('gBk','no','2','gBkyo');" />无<input type="radio" id="gBk"  name="gBk" value="2"  onclick="zdzcqtpb('gBk','no','2','gBkyo');" />有
+								<input type="text" name="gBkyo"
+										id="gBkyo" value="" size="20" class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">肝大：</div></td>
+							<td colspan="5">
+								<input type="radio" id="gGanda"  name="gGanda" value="1"  checked onclick="zdzcqtpb('gGanda','no','2','gGandayo');" />无<input type="radio" id="gGanda"  name="gGanda" value="2"  onclick="zdzcqtpb('gGanda','no','2','gGandayo');" />有
+								<input type="text" name="gGandayo"
+										id="gGandayo" value="" size="20"
+										class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">脾大：</div></td>
+							<td colspan="5" >
+								<input type="radio" id="gPida"  name="gPida" value="1"  checked onclick="zdzcqtpb('gPida','no','2','gPidayo');" />无<input type="radio" id="gPida"  name="gPida" value="2"  onclick="zdzcqtpb('gPida','no','2','gPidayo');" />有
+								<input type="text" name="gPidayo"
+										id="gPidayo" value="" size="20"
+										class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">移动性浊音：</div></td>
+							<td colspan="5">
+								<input type="radio" id="gZhuoyin"  name="gZhuoyin" value="1"  checked onclick="zdzcqtpb('gZhuoyin','no','2','gZhuoyinyo');" />无<input type="radio" id="gZhuoyin"  name="gZhuoyin" value="2"  onclick="zdzcqtpb('gZhuoyin','no','2','gZhuoyinyo');" />有
+								<input type="text" name="gZhuoyinyo"
+										id="gZhuoyinyo" value="" size="20"
+										class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">下肢水肿</div></td>
+							<td colspan="6" >
+								<input type="radio" id="gXzsz"  name="gXzsz" value="1"  checked onclick="null" />无<input type="radio" id="gXzsz"  name="gXzsz" value="2"  onclick="null" />左侧<input type="radio" id="gXzsz"  name="gXzsz" value="3"  onclick="null" />右侧<input type="radio" id="gXzsz"  name="gXzsz" value="4"  onclick="null" />双侧不对称<input type="radio" id="gXzsz"  name="gXzsz" value="5"  onclick="null" />双侧对称
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">足背动脉搏动</div></td>
+							<td colspan="6">
+								<input type="radio" id="gZbdmmd"  name="gZbdmmd" value="1"  onclick="null" />未触及<input type="radio" id="gZbdmmd"  name="gZbdmmd" value="2"  checked onclick="null" />触及双侧对称<input type="radio" id="gZbdmmd"  name="gZbdmmd" value="3"  onclick="null" />触及左侧弱或消失<input type="radio" id="gZbdmmd"  name="gZbdmmd" value="4"  onclick="null" />触及右侧弱或消失
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark">肛门指诊*</td>
+							<td colspan="6" >
+								<input type="checkbox" id="gGmzhzh" name="gGmzhzh" value="1" onclick="zdzcqtpb('gGmzhzh','1','99','gGmzhzhyi');"/><span>未见异常</span><input type="checkbox" id="gGmzhzh" name="gGmzhzh" value="2" onclick="zdzcqtpb('gGmzhzh','1','99','gGmzhzhyi');"/><span>触痛</span><input type="checkbox" id="gGmzhzh" name="gGmzhzh" value="3" onclick="zdzcqtpb('gGmzhzh','1','99','gGmzhzhyi');"/><span>包块</span><input type="checkbox" id="gGmzhzh" name="gGmzhzh" value="4" onclick="zdzcqtpb('gGmzhzh','1','99','gGmzhzhyi');"/><span>前列腺异常</span><input type="checkbox" id="gGmzhzh" name="gGmzhzh" value="99" onclick="zdzcqtpb('gGmzhzh','1','99','gGmzhzhyi');"/><span>其他</span>
+								<input type="text" name="gGmzhzhyi"
+										id="gGmzhzhyi" value="" size="20"
+										class="input_5" /> 
+							</td>
+							<td width="12%" class="dark" >
+							
+							<div class="qzbr"    id="tjgmzzysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjgmzzysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjgmzzysqminp"   class="input_5" name="tjgmzzysqm"  value="" /> 
+					
+								
+										
+										
+										
+										
+										
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark">乳 腺*</td>
+							<td colspan="6">
+								<input type="checkbox" id="gRuxian" name="gRuxian" value="1" onclick="zdzcqtpb('gRuxian','1','99','gRuxianqt');"/><span>未见异常</span><input type="checkbox" id="gRuxian" name="gRuxian" value="2" onclick="zdzcqtpb('gRuxian','1','99','gRuxianqt');"/><span>乳房切除</span><input type="checkbox" id="gRuxian" name="gRuxian" value="3" onclick="zdzcqtpb('gRuxian','1','99','gRuxianqt');"/><span>异常泌乳</span><input type="checkbox" id="gRuxian" name="gRuxian" value="4" onclick="zdzcqtpb('gRuxian','1','99','gRuxianqt');"/><span>乳腺包块</span><input type="checkbox" id="gRuxian" name="gRuxian" value="99" onclick="zdzcqtpb('gRuxian','1','99','gRuxianqt');"/><span>其他</span>
+								<input type="text" name="gRuxianqt" id="gRuxianqt"
+									value="" size="20" class="input_5" />
+							</td>
+							<td width="12%" class="dark" >
+							
+								<div class="qzbr"    id="tjrxysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjrxysqm"  value=""  size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjrxysqminp"   class="input_5" name="tjrxysqm"  value="" /> 
+								
+										
+										
+										
+										
+										
+										</td>
+						</tr>
+						
+							<tr>
+								<td rowspan="5" align="center" class="dark">
+									妇科*
+								</td>
+								<td>
+									外阴
+								</td>
+								<td colspan="5">
+									<input type="radio" id="gWaiyin"  name="gWaiyin" value="1"  onclick="zdzcqtpb('gWaiyin','no','2','gWaiyinyc');" />未见异常<input type="radio" id="gWaiyin"  name="gWaiyin" value="2"  onclick="zdzcqtpb('gWaiyin','no','2','gWaiyinyc');" />异常
+									<input type="text" name="gWaiyinyc"
+											id="gWaiyinyc" value="" size="20"
+											class="input_5" /> 
+								</td>
+								<td width="12%" class="dark" rowspan="5" >
+						
+								<div class="qzbr"    id="tjfkysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjfkysqm"  value=""  size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjfkysqminp"   class="input_5" name="tjfkysqm"  value="" /> 
+										</td>
+							</tr>
+							<tr>
+								<td >
+									阴道
+								</td>
+								<td colspan="5" >
+									<input type="radio" id="gYindao"  name="gYindao" value="1"  onclick="zdzcqtpb('gYindao','no','2','gYindaoyc');" />未见异常<input type="radio" id="gYindao"  name="gYindao" value="2"  onclick="zdzcqtpb('gYindao','no','2','gYindaoyc');" />异常
+									<input type="text" name="gYindaoyc"
+											id="gYindaoyc" value="" size="20"
+											class="input_5" /> 
+								</td>
+							</tr>
+							<tr>
+								<td>
+									宫颈
+								</td>
+								<td colspan="5">
+									<input type="radio" id="gGongjing"  name="gGongjing" value="1"  onclick="zdzcqtpb('gGongjing','no','2','gGongjingyc');" />未见异常<input type="radio" id="gGongjing"  name="gGongjing" value="2"  onclick="zdzcqtpb('gGongjing','no','2','gGongjingyc');" />异常
+									<input type="text" name="gGongjingyc"
+											id="gGongjingyc" value="" size="20"
+											class="input_5" /> 
+								</td>
+							</tr>
+							<tr>
+								<td >
+									宫体
+								</td>
+								<td colspan="5" >
+									<input type="radio" id="gGongti"  name="gGongti" value="1"  onclick="zdzcqtpb('gGongti','no','2','gGongtiyc');" />未见异常<input type="radio" id="gGongti"  name="gGongti" value="2"  onclick="zdzcqtpb('gGongti','no','2','gGongtiyc');" />异常
+									<input type="text" name="gGongtiyc"
+											id="gGongtiyc" value="" size="20"
+											class="input_5"/> 
+								</td>
+							</tr>
+							<tr>
+								<td>
+									附件
+								</td>
+								<td colspan="5">
+									<input type="radio" id="gFujian"  name="gFujian" value="1"  onclick="zdzcqtpb('gFujian','no','2','gFujianyc');" />未见异常<input type="radio" id="gFujian"  name="gFujian" value="2"  onclick="zdzcqtpb('gFujian','no','2','gFujianyc');" />异常
+									<input type="text" name="gFujianyc"
+											id="gFujianyc" value="" size="20"
+											class="input_5"/>
+								</td>
+							</tr>
+						
+						<tr>
+							<td align="center" class="dark">
+								其 他*
+							</td>
+							<td colspan="6" >
+								<input type="text" name="gCtqt" id="gCtqt"
+									value="" size="20" class="input_5" />
+							</td>
+							
+								<td width="12%" class="dark" >
+							
+										
+						<div class="qzbr"    id="tjctqtysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        <input type="text" id="" name="sdtjctqtysqm" value=""  size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjctqtysqminp"   class="input_5" name="tjctqtysqm"  value="" /> 
+										</td>
+						</tr>
+			<!-- 		</table>
+					
+			</div>
+			
+			<div id="page2">
+				<div align="center">
+					<table border="0" width="900" cellspacing="0" cellpadding="0"
+						id="table2" class="QueryTable3" style="border-top: 0;border-bottom: 0">
+						 -->
+						<tr>
+							
+								
+								
+									<td rowspan="18"  width="12%" align="center" class="dark">
+										辅助检查
+									</td>
+								
+							
+								<td align="center" class="dark">
+								血型*
+							</td>
+							<td  colspan="6">
+							
+							ABO  <input type="text" name="IbF34c7f9a3021447b88e4b2f0f746749d0" id="IbF34c7f9a3021447b88e4b2f0f746749d0" value="O型"
+									size="10" class="input_5" />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									
+									
+							 Rh*
+								<input type="text" name="XuG50dbbe4597a249e59da67abd1f0571f6" id="XuG50dbbe4597a249e59da67abd1f0571f6" value="不详"
+									size="10" class="input_5" />
+							</td>
+							
+							
+								<td width="12%" rowspan="5"    class="dark">
+						
+						<div class="qzbr"    id="tjfzjcxxysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjfzjcxxysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjfzjcxxysqminp"   class="input_5" name="tjfzjcxxysqm"  value="" /> 
+								
+									
+									
+									
+									
+									</td>
+							
+							
+							
+							
+							</tr>
+							<tr>
+							<td align="center" class="dark">
+								血常规*
+							</td>
+							<td colspan="6">
+								
+									<input type="text" name="cb6c916178cd405ebadb183ca5be8d56" id="cb6c916178cd405ebadb183ca5be8d56" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="d04d4d650f904b66a96cb4657aac7833" id="d04d4d650f904b66a96cb4657aac7833" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="645fe1dfab3e4b41b41be70f626207f9" id="645fe1dfab3e4b41b41be70f626207f9" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="6009b0d64de14e068b3af09b71a85b46" id="6009b0d64de14e068b3af09b71a85b46" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="619ed2caaac1449c8aa215f4c212c1f0" id="619ed2caaac1449c8aa215f4c212c1f0" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="8c1a6d6d01e34a19b3912e48c70b0dfd" id="8c1a6d6d01e34a19b3912e48c70b0dfd" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								
+								血红蛋白
+								
+								<input type="text" name="SmMdb480873610440e5af60f2115d8e09b7" id="SmMdb480873610440e5af60f2115d8e09b7" value=""
+									size="10" class="input_5" onblur="xcgyc()"/>
+								g/L
+								</br>
+									 
+								白细胞
+								
+								<input type="text" name="pGM3bdc7fe818984a04a6d9c9bd9ec0a476" id="pGM3bdc7fe818984a04a6d9c9bd9ec0a476" value=""
+									size="10" class="input_5" onblur="xcgyc()"/>
+								×10
+								<sup>
+									9
+								</sup>
+								/L
+								</br>
+								血小板
+								
+									
+									<input type="text" name="58068abd97cd4b4cac9aba48f5c2b418" id="58068abd97cd4b4cac9aba48f5c2b418" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="f2315b782bc142b0bc9519af6760b2f9" id="f2315b782bc142b0bc9519af6760b2f9" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="c30bdfd05c6a4230afe1ad3cf6b4c331" id="c30bdfd05c6a4230afe1ad3cf6b4c331" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="zhO031002bef49b406c892cbf2b8837a91c" id="zhO031002bef49b406c892cbf2b8837a91c" value=""
+									size="10" class="input_5" onblur="xcgyc()"/>
+								×10
+								<sup>
+									9
+								</sup>
+								/L
+								</br>
+								其他
+									
+									<input type="text" name="b59c60ad981647e8b018bf045f29caf1" id="b59c60ad981647e8b018bf045f29caf1" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="8c3e2d4bc4af435481ed5055d369ab16" id="8c3e2d4bc4af435481ed5055d369ab16" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="4868ab8ccc0e49e4a3e9628260e0ceed" id="4868ab8ccc0e49e4a3e9628260e0ceed" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="379301b430b24d408a74b9c5e5f5dad7" id="379301b430b24d408a74b9c5e5f5dad7" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="60baaf9050b5438aaa162fb6846c27f0" id="60baaf9050b5438aaa162fb6846c27f0" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="gXcgqt" id="gXcgqt"
+									value="" size="20" class="input_5" />
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								尿常规*
+							</td>
+							<td colspan="6" >
+								
+									<input type="text" name="50b82765dc184877966260074485c4c2" id="50b82765dc184877966260074485c4c2" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="87f15651714a4ed197a1297bcd8fbc55" id="87f15651714a4ed197a1297bcd8fbc55" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="26f0e4059715413a91f9ceaf6714a4c8" id="26f0e4059715413a91f9ceaf6714a4c8" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="65ea6bfccaa64fafb38e686c75a619df" id="65ea6bfccaa64fafb38e686c75a619df" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="668ce3b877a44a7b802333ae4aafb6ad" id="668ce3b877a44a7b802333ae4aafb6ad" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="c2be029abdac4abb88c87eebcd32dcd4" id="c2be029abdac4abb88c87eebcd32dcd4" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="b345f017d9174133b18278a05ec4b5da" id="b345f017d9174133b18278a05ec4b5da" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="50ebb832190e41bdb1d4c86bc06a7cef" id="50ebb832190e41bdb1d4c86bc06a7cef" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								 
+								
+								尿蛋白
+								
+								<input type="text" name="LBt9a93bbb6cc2940ba83ab07bd123756bc" id="LBt9a93bbb6cc2940ba83ab07bd123756bc"
+									value="" size="1" class="input_5" onblur="ncgyc()"/>
+								<br/>尿糖
+								
+									
+									<input type="text" name="02083aa791ed482da2afd8150531c570" id="02083aa791ed482da2afd8150531c570" onblur="ncgyc()" style="display:none;
+									position: absolute; 
+									zoom: 0.001; 
+									-moz-transform: scale(0); 
+									-webkit-transform: scale(0); 
+									-o-transform: scale(0); 
+									transform: scale(0); 
+									/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="352eb6fa1b8d47d1ad9e1ecb9e684669" id="352eb6fa1b8d47d1ad9e1ecb9e684669" onblur="ncgyc()" style="display:none;
+									position: absolute; 
+									zoom: 0.001; 
+									-moz-transform: scale(0); 
+									-webkit-transform: scale(0); 
+									-o-transform: scale(0); 
+									transform: scale(0); 
+									/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="cf574a81f2a141529eb27e158aa2b967" id="cf574a81f2a141529eb27e158aa2b967" onblur="ncgyc()" style="display:none;
+									position: absolute; 
+									zoom: 0.001; 
+									-moz-transform: scale(0); 
+									-webkit-transform: scale(0); 
+									-o-transform: scale(0); 
+									transform: scale(0); 
+									/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="Ecaea7bfa03c3cb4d238011d65160d2b076" id="Ecaea7bfa03c3cb4d238011d65160d2b076" value=""
+									size="1" class="input_5" onblur="ncgyc()" />
+										
+									<input type="text" name="60c916706d54491eac399a0e5ad74d47" id="60c916706d54491eac399a0e5ad74d47" onblur="ncgyc()" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="eaf9c7a2c31b4c67acea13288a20e09b" id="eaf9c7a2c31b4c67acea13288a20e09b" onblur="ncgyc()" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="3898baf920ec4bdf81c6fe005bcd7534" id="3898baf920ec4bdf81c6fe005bcd7534" onblur="ncgyc()" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="0b2c2db7e46e4f939eeaa1cdcba2366b" id="0b2c2db7e46e4f939eeaa1cdcba2366b" onblur="ncgyc()" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="4b8c53f543dc45b69153b56c32d4a989" id="4b8c53f543dc45b69153b56c32d4a989" onblur="ncgyc()" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="2d1f54ae16304db3ac1b363ed38c45c7" id="2d1f54ae16304db3ac1b363ed38c45c7" onblur="ncgyc()" style="display:none;
+										position: absolute; 
+										zoom: 0.001; 
+										-moz-transform: scale(0); 
+										-webkit-transform: scale(0); 
+										-o-transform: scale(0); 
+										transform: scale(0); 
+										/* 不占据空间，无法点击 */ " />
+								 
+								<br/>尿酮体
+								
+								<input type="text" name="ejo2f3910611cb941929567ec75c4b9ffde" id="ejo2f3910611cb941929567ec75c4b9ffde"
+									value="" size="1" class="input_5" onblur="ncgyc()"/>
+								<br/>尿潜血
+								
+									
+									<input type="text" name="3e0ee6bd2230493992e7167b4b468aa7" id="3e0ee6bd2230493992e7167b4b468aa7" onblur="ncgyc()" style="display:none; 
+									position: absolute; 
+									zoom: 0.001; 
+									-moz-transform: scale(0); 
+									-webkit-transform: scale(0); 
+									-o-transform: scale(0); 
+									transform: scale(0); 
+									/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="692e4e90947e4f74b6dab929a2af157a" id="692e4e90947e4f74b6dab929a2af157a" onblur="ncgyc()" style="display:none; 
+									position: absolute; 
+									zoom: 0.001; 
+									-moz-transform: scale(0); 
+									-webkit-transform: scale(0); 
+									-o-transform: scale(0); 
+									transform: scale(0); 
+									/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="f1bc7c9baf9e4e32ad956dc257a1f4cb" id="f1bc7c9baf9e4e32ad956dc257a1f4cb" onblur="ncgyc()" style="display:none; 
+									position: absolute; 
+									zoom: 0.001; 
+									-moz-transform: scale(0); 
+									-webkit-transform: scale(0); 
+									-o-transform: scale(0); 
+									transform: scale(0); 
+									/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="ba66b25dff674ba2868c715f79a8b3a2" id="ba66b25dff674ba2868c715f79a8b3a2" onblur="ncgyc()" style="display:none; 
+									position: absolute; 
+									zoom: 0.001; 
+									-moz-transform: scale(0); 
+									-webkit-transform: scale(0); 
+									-o-transform: scale(0); 
+									transform: scale(0); 
+									/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="Ddo9258279c3d12473fa4c9849427a67949" id="Ddo9258279c3d12473fa4c9849427a67949"
+									value="" size="1" class="input_5" onblur="ncgyc()"/>
+								<br/>其他
+									
+									<input type="text" name="089a76a4d6564f4fb5115533cd749f2d" id="089a76a4d6564f4fb5115533cd749f2d" style="display:none;
+									position: absolute; 
+									zoom: 0.001; 
+									-moz-transform: scale(0); 
+									-webkit-transform: scale(0); 
+									-o-transform: scale(0); 
+									transform: scale(0); 
+									/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="gNcgqt" id="gNcgqt"
+									value="" size="10" class="input_5" />
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								空腹血糖*
+							</td>
+							<td colspan="4">
+								
+								
+									<input type="text" name="ff52824f9e444211aed0676ad966041e" id="ff52824f9e444211aed0676ad966041e" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="4c8d05d5e26244c899378aa03586c40d" id="4c8d05d5e26244c899378aa03586c40d" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="69b813d7bcf94ba7b8fba7318f0bddd4" id="69b813d7bcf94ba7b8fba7318f0bddd4" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="7375cbcda6344101a12d8649317c03b2" id="7375cbcda6344101a12d8649317c03b2" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="8d68c34501fc420fb199cf5d7bddeffd" id="8d68c34501fc420fb199cf5d7bddeffd" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="9e34a2a6aa3a4bf4891156ddef043da0" id="9e34a2a6aa3a4bf4891156ddef043da0" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="a5b45fc7a79a409d9e81f96cdfd8cc3f" id="a5b45fc7a79a409d9e81f96cdfd8cc3f" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="8ea06edea2354a70a358585c48a6bda2" id="8ea06edea2354a70a358585c48a6bda2" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="hidden" name="nrtnbgl" id="nrtnbgl" value="1" />
+								<input type="text" name="UQf5b1a2dea615d438592c4388a45ff1278" id="UQf5b1a2dea615d438592c4388a45ff1278"
+									value="" size="10" class="d_wb" onblur="xtyc()"/>
+								mmol/L
+							</td>
+							<td align="center" class="dark">
+								餐后2H血糖*
+							</td>
+							<td>
+								
+									<input type="text" name="6ab6b82445534bd99ed0f7b5fb2a2cdc" id="6ab6b82445534bd99ed0f7b5fb2a2cdc" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="b5c712060cf34af4945bc66b09215c39" id="b5c712060cf34af4945bc66b09215c39" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="f18377304ead4cfb9c3d989939397ac8" id="f18377304ead4cfb9c3d989939397ac8" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="6e8a5e58716649debe88535af4ca432d" id="6e8a5e58716649debe88535af4ca432d" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="29f417290b84410eb3efec046ed86e29" id="29f417290b84410eb3efec046ed86e29" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="02be00656157406aae63b50d79675924" id="02be00656157406aae63b50d79675924" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="7eb53f97cdbf43129f02e247fb72de73" id="7eb53f97cdbf43129f02e247fb72de73" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="eb1eae99f348498ca1aa261140a47054" id="eb1eae99f348498ca1aa261140a47054" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="c12a4a57a9a741b7a069d30ebc6bb2c1" id="c12a4a57a9a741b7a069d30ebc6bb2c1" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="KZZff0b8279ffc7438abedc9bb1b116cf99" id="KZZff0b8279ffc7438abedc9bb1b116cf99"
+									value="" size="10" class="d_wb" />
+								mmol/L
+							</td>
+						</tr>
+						
+
+						<tr>
+							<td align="center" class="dark">
+								同型半胱氨酸*
+							</td>
+							<td colspan="6">
+								
+									<input type="text" name="eeafe6ec9d2d4d75a0dd2becc7235436" id="eeafe6ec9d2d4d75a0dd2becc7235436" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="424b1c65603d41e085734b287730e8de" id="424b1c65603d41e085734b287730e8de" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="dd8866a3308948aeb075172a612171c8" id="dd8866a3308948aeb075172a612171c8" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="e9a3abfc6c394b508dd8b567352fc594" id="e9a3abfc6c394b508dd8b567352fc594" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="4c112cb9b4504fff900d1df39cd76ca3" id="4c112cb9b4504fff900d1df39cd76ca3" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="iVp21c6e797ac7c437a92fd9f29c7f6b0f1" id="iVp21c6e797ac7c437a92fd9f29c7f6b0f1"
+									value="" size="20" class="input_5" />
+								umol/L
+							</td>
+						</tr>						<tr>
+							<td align="center" class="dark">
+								尿微量白蛋白*
+							</td>
+							<td colspan="6">
+								
+									<input type="text" name="a50615021b7645eb9c6aa919e96fe916" id="a50615021b7645eb9c6aa919e96fe916" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="c9a5284483ff40e2ae26fd2f06ae1bb7" id="c9a5284483ff40e2ae26fd2f06ae1bb7" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="80b942c5af7243319bf30753dc3933f1" id="80b942c5af7243319bf30753dc3933f1" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="8e5b08de461f4c5cbdf835deae0bc2d3" id="8e5b08de461f4c5cbdf835deae0bc2d3" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="f63703a1cc3e4beebc9b975ffb94f84c" id="f63703a1cc3e4beebc9b975ffb94f84c" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="2405e31a101b4d62a3baaf923c7d8324" id="2405e31a101b4d62a3baaf923c7d8324" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="b6b06402dd324ae0b43cdc85bde036fc" id="b6b06402dd324ae0b43cdc85bde036fc" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="78d13c152a43476680aaff945140525a" id="78d13c152a43476680aaff945140525a" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="01fd5a6e31b7477b9c977df57edb8403" id="01fd5a6e31b7477b9c977df57edb8403" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="dOSed2861d53a404543aedca0b7767145e6" id="dOSed2861d53a404543aedca0b7767145e6"
+									value="" size="20" class="input_5" />
+								mg/dL
+							</td>
+								<td  class="dark">
+							
+					<div class="qzbr"    id="tjnwlbdbysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjnwlbdbysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjnwlbdbysqminp"   class="input_5" name="tjnwlbdbysqm"  value="" /> 
+							
+									
+									
+									
+									
+									
+									
+									</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								大便潜血*
+							</td>
+							<td colspan="6" >
+								<input type="radio" id="lKX1c0cb28ef7714d8a9ba1123928f5a820"  name="lKX1c0cb28ef7714d8a9ba1123928f5a820" value="1"  onclick="null" />阴性<input type="radio" id="lKX1c0cb28ef7714d8a9ba1123928f5a820"  name="lKX1c0cb28ef7714d8a9ba1123928f5a820" value="2"  onclick="null" />阳性
+							</td>
+							<td rowspan="6"  class="dark">
+								
+									<input type="text" name="5e9207b4709a4eaa896a986df2917878" id="5e9207b4709a4eaa896a986df2917878" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="10e28c0a1f3842df8c941f5b3e2dae28" id="10e28c0a1f3842df8c941f5b3e2dae28" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="afd429409b8b4b228290dc050ec0aff9" id="afd429409b8b4b228290dc050ec0aff9" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="9de95a30b1994ad6b40128fbceab3bd2" id="9de95a30b1994ad6b40128fbceab3bd2" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="a05a74b017034d1d99c1aa5711317dbd" id="a05a74b017034d1d99c1aa5711317dbd" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="0e8da0629b5d4812970b2048b122a9a5" id="0e8da0629b5d4812970b2048b122a9a5" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="c486aad2dffe48ed98c5bd76856cfd60" id="c486aad2dffe48ed98c5bd76856cfd60" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+							
+							<div class="qzbr"    id="tjfzjcdbqxysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjfzjcdbqxysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjfzjcdbqxysqminp"   class="input_5" name="tjfzjcdbqxysqm"  value="" /> 
+								
+									
+									
+									
+									</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								糖化血红蛋白*
+							</td>
+							<td colspan="6" >
+								
+									<input type="text" name="bb5dba46dbee427f9cc4a091f6b7c4e2" id="bb5dba46dbee427f9cc4a091f6b7c4e2" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="da5e9af944594c7da68d48fd612a4d01" id="da5e9af944594c7da68d48fd612a4d01" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="1d01c5ee80ca45cc9a27e9b7c0ed4cdc" id="1d01c5ee80ca45cc9a27e9b7c0ed4cdc" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="31ea6f1198d5490f9bea7e61ac9c6d1a" id="31ea6f1198d5490f9bea7e61ac9c6d1a" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="9c1c313951f048afbde74366f5f28023" id="9c1c313951f048afbde74366f5f28023" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="a20872ba9cc1424c842b053885b5ff9f" id="a20872ba9cc1424c842b053885b5ff9f" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="34f228dad6e7465cb9f6388ee57652f3" id="34f228dad6e7465cb9f6388ee57652f3" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="text" name="LNb05c7c7042fdc43c29f9b344d8c78a265" id="LNb05c7c7042fdc43c29f9b344d8c78a265"
+									value="" size="20" class="input_5" />
+								%
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								乙型肝炎表面抗原*
+							</td>
+							<td colspan="6">
+								<input type="radio" id="uQ_dfbb63bafec942f2b08b1d6a94e74edf"  name="uQ_dfbb63bafec942f2b08b1d6a94e74edf" value="1"  onclick="null" />阴性<input type="radio" id="uQ_dfbb63bafec942f2b08b1d6a94e74edf"  name="uQ_dfbb63bafec942f2b08b1d6a94e74edf" value="2"  onclick="null" />阳性
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								肝功能*
+							</td>
+							<td colspan="6">
+								
+									<input type="text" name="78952aa09d8f4098ae325cbe73049631" id="78952aa09d8f4098ae325cbe73049631" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="7e96fa59ffa34653bf2253dc1d0b8f32" id="7e96fa59ffa34653bf2253dc1d0b8f32" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="5b26a62481434ccbaa2b2cfe4850a94c" id="5b26a62481434ccbaa2b2cfe4850a94c" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="52e6499789544fe0b1f1ace7501035ec" id="52e6499789544fe0b1f1ace7501035ec" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="b24be42338c145d5b460afeecb5b5805" id="b24be42338c145d5b460afeecb5b5805" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="62be4501dc2c48d9867a9e7c2e7a76c2" id="62be4501dc2c48d9867a9e7c2e7a76c2" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="0ed562cb683d4911b41a484edcbb9dc0" id="0ed562cb683d4911b41a484edcbb9dc0" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								
+								血清谷丙转氨酶
+								
+								<input type="text" name="cqf333a28ae22474824b488db2d6663abf4" id="cqf333a28ae22474824b488db2d6663abf4" value=""
+									size="10" class="input_5" onblur="ggnyc()"/>
+								U/L,
+								</br>
+								血清谷草转氨酶
+								
+								<input type="text" name="wnAb3eed152713f49b7b1178114bf77e7df" id="wnAb3eed152713f49b7b1178114bf77e7df" value=""
+									size="10" class="input_5" onblur="ggnyc()"/>
+								U/L,
+								</br>
+									
+									<input type="text" name="a2c9227f7d8b4198ad7a85be38a4fb44" id="a2c9227f7d8b4198ad7a85be38a4fb44" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="5a711f3eb1634917be9031744c02140a" id="5a711f3eb1634917be9031744c02140a" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="383df2e07f0f44f39f2d00819accd3c5" id="383df2e07f0f44f39f2d00819accd3c5" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="e177cd68deb34846a8086addbb5441a5" id="e177cd68deb34846a8086addbb5441a5" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="f8ca4df3345b4f6698677a953d991af2" id="f8ca4df3345b4f6698677a953d991af2" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								白蛋白
+								
+								<input type="text" name="aTOa7e43cd81988430dbf5f6a186e6b43e5" id="aTOa7e43cd81988430dbf5f6a186e6b43e5" value=""
+									size="10" class="input_5" onblur="ggnyc()"/>
+								g/L,
+								</br>
+								总胆红素
+								
+								<input type="text" name="pLYb1aca36504814c5a96cc9418f988de3f" id="pLYb1aca36504814c5a96cc9418f988de3f"
+									value="" size="10" class="input_5" onblur="ggnyc()"/>
+								umol/L,
+								</br>
+									
+									<input type="text" name="2d00dc135f5b407d8f63863ffcc06c4f" id="2d00dc135f5b407d8f63863ffcc06c4f" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="5b5e26461edb4439ada452fbde834520" id="5b5e26461edb4439ada452fbde834520" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								结合胆红素
+								<input type="text" name="_Kof2a39f68868f4f35a218011c8d1f73b5" id="_Kof2a39f68868f4f35a218011c8d1f73b5"
+									value="" size="10" class="input_5" />
+								umol/L
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								肾功能*
+							</td>
+							<td colspan="6" >
+								 
+								
+								血清肌酐
+								
+								<input type="text" name="ANfef7214d6971d45d5ad0ce03059025d30" id="ANfef7214d6971d45d5ad0ce03059025d30" value=""
+									size="10" class="input_5" onblur="sgnyc()"/>
+								umol/L,
+								</br>
+								血尿素氮
+								
+								<input type="text" name="fZU7e3890526ddc4091acfb4782d96a1b1a" id="fZU7e3890526ddc4091acfb4782d96a1b1a" value=""
+									size="10" class="input_5" onblur="sgnyc()"/>
+								mmol/L,
+								</br>
+								血钾浓度
+								<input type="text" name="_Bdc8e661a70ef74ed3a9c62a17e3f224cf" id="_Bdc8e661a70ef74ed3a9c62a17e3f224cf"
+									value="" size="10" class="input_5" />
+								umol/L,
+								</br>
+								血钠浓度
+								<input type="text" name="DVz24d9596a61424cfdb26001f13bc2204b" id="DVz24d9596a61424cfdb26001f13bc2204b"
+									value="" size="10" class="input_5" />
+								mmol/L
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								血脂*
+							</td>
+							<td colspan="6">
+								
+									<input type="text" name="ffbf818c494c46168908eddb68be63b5" id="ffbf818c494c46168908eddb68be63b5" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="431f88c373a9479dbc75e7c28f883a02" id="431f88c373a9479dbc75e7c28f883a02" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								
+								总胆固醇
+								
+								<input type="text" name="peD209f2a6e2d2e478399552d86c60c1ce6" id="peD209f2a6e2d2e478399552d86c60c1ce6" value=""
+									size="10" class="input_5" onblur="zdgcyc()"/>
+								mmol/L
+								</br>
+								甘油三酯
+								
+								<input type="text" name="vSkb9606f2ecc6b4516b9f2f5d574b65c46" id="vSkb9606f2ecc6b4516b9f2f5d574b65c46" value=""
+									size="10" class="input_5" onblur="zdgcyc()"/>
+								mmol/L
+								</br>
+								血清低密度脂蛋白胆固醇
+								
+								<input type="text" name="pAW118cc958315a4b7487c366fd98c5d2e1" id="pAW118cc958315a4b7487c366fd98c5d2e1"
+									value="" size="10" class="input_5" onblur="zdgcyc()"/>
+								mmol/L
+								</br>
+								血清高密度脂蛋白胆固醇
+								
+								<input type="text" name="i_Tde2ce32b6f124fcf9916b7eab4539d15" id="i_Tde2ce32b6f124fcf9916b7eab4539d15"
+									value="" size="10" class="input_5" onblur="zdgcyc()"/>
+								mmol/L
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								心电图*
+							</td>
+							<td colspan="6">
+								
+									<input type="text" name="ffbf818c494c46168908eddb68be63b5" id="ffbf818c494c46168908eddb68be63b5" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="431f88c373a9479dbc75e7c28f883a02" id="431f88c373a9479dbc75e7c28f883a02" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="1" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>正常</span><input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="2" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>ST-T改变</span><input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="3" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>陈旧性心肌梗塞</span><input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="4" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>窦性心动过速</span><input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="5" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>窦性心动过缓</span><input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="6" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>早搏</span><input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="7" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>房颤</span><input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="8" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>房室传导阻滞</span><input type="checkbox" id="jfN16ae3b7c8db04ddab4cc541e66f055c4" name="jfN16ae3b7c8db04ddab4cc541e66f055c4" value="99" onclick="zdzcqtpb('jfN16ae3b7c8db04ddab4cc541e66f055c4','1','99','xurcd6dc2bf16d34dccad44c1c022c87ca0');"/><span>其他</span>
+								<input type="text" name="xurcd6dc2bf16d34dccad44c1c022c87ca0"
+										id="xurcd6dc2bf16d34dccad44c1c022c87ca0" value="" 
+										class="input_5" />
+							</td>
+							<td class="dark">
+							
+							
+									<div class="qzbr"    id="tjxdtysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjxdtysqm" value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjxdtysqminp"   class="input_5" name="tjxdtysqm"  value="" /> 
+										
+										
+										
+										
+										
+										
+										
+							</td>
+						</tr> 
+						<tr>
+							<td align="center" class="dark">
+								胸部X线片*
+							</td>
+							<td colspan="6">
+								
+									<input type="text" name="f826b9e0f53544b6b0f4cbeaae0228a1" id="f826b9e0f53544b6b0f4cbeaae0228a1" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="7830f7363a074b9a89767e31136445a3" id="7830f7363a074b9a89767e31136445a3" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="ba88055aa7e64458addc5ee0d6a28f95" id="ba88055aa7e64458addc5ee0d6a28f95" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="ce4eb2fde8154f4facb46bbbb6b23b75" id="ce4eb2fde8154f4facb46bbbb6b23b75" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="2cc137bbc49446d69a6d9bc5bfb2d6bc" id="2cc137bbc49446d69a6d9bc5bfb2d6bc" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="5a8c69aaef7145e59b68f3df40d921b6" id="5a8c69aaef7145e59b68f3df40d921b6" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+								<input type="radio" id="EyH64c1244f93684f93ad7899553bdf753a"  name="EyH64c1244f93684f93ad7899553bdf753a" value="1"  onclick="zdzcqtpb('EyH64c1244f93684f93ad7899553bdf753a','no','2','meu58a1c22ff4934577a682e39807696ecf');" />正常<input type="radio" id="EyH64c1244f93684f93ad7899553bdf753a"  name="EyH64c1244f93684f93ad7899553bdf753a" value="2"  onclick="zdzcqtpb('EyH64c1244f93684f93ad7899553bdf753a','no','2','meu58a1c22ff4934577a682e39807696ecf');" />异常
+								<input type="text" name="meu58a1c22ff4934577a682e39807696ecf"
+										id="meu58a1c22ff4934577a682e39807696ecf" value="" size="20"
+										class="input_5" /> 
+							</td>
+												<td class="dark">
+							
+							
+	<div class="qzbr"    id="tjxbxxpysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjxbxxpysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjxbxxpysqminp"   class="input_5" name="tjxbxxpysqm"  value="" /> 
+								
+							
+
+</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark" rowspan="2">
+								B 超*
+							</td>
+							<td colspan="6" >
+								
+									<input type="text" name="16a5d7530aa34c5bbba062bc347741b0" id="16a5d7530aa34c5bbba062bc347741b0" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="d1188c0a5337470395da489d7a0cb939" id="d1188c0a5337470395da489d7a0cb939" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="f7aa327dca564c7eabf670e2ed5f2713" id="f7aa327dca564c7eabf670e2ed5f2713" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="48278fbd31194fb9be08486f15482fec" id="48278fbd31194fb9be08486f15482fec" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="cfca742634a642108782074d8910b457" id="cfca742634a642108782074d8910b457" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="8366079a5ed446c486b7e8789faa2f3e" id="8366079a5ed446c486b7e8789faa2f3e" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="7be3bb655c5948b498878f3a167cd7ca" id="7be3bb655c5948b498878f3a167cd7ca" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								
+									<input type="text" name="08a9f4d29ab54cd8a5fd778ae53011b8" id="08a9f4d29ab54cd8a5fd778ae53011b8" style="display:none;
+position: absolute; 
+zoom: 0.001; 
+-moz-transform: scale(0); 
+-webkit-transform: scale(0); 
+-o-transform: scale(0); 
+transform: scale(0); 
+/* 不占据空间，无法点击 */ " />
+								 
+							腹部B超
+								<input type="radio" id="EMP159307c80afe483a8deaed478fbf4241"  name="EMP159307c80afe483a8deaed478fbf4241" value="1"  onclick="zdzcqtpb('EMP159307c80afe483a8deaed478fbf4241','no','2','nLZ70dd331b80e142539c1684d4b053d5ca');" />正常<input type="radio" id="EMP159307c80afe483a8deaed478fbf4241"  name="EMP159307c80afe483a8deaed478fbf4241" value="2"  onclick="zdzcqtpb('EMP159307c80afe483a8deaed478fbf4241','no','2','nLZ70dd331b80e142539c1684d4b053d5ca');" />异常
+								<input type="text" name="nLZ70dd331b80e142539c1684d4b053d5ca"
+										id="nLZ70dd331b80e142539c1684d4b053d5ca" value="" 
+										class="input_5"  size="50"/>
+							</td>
+									<td width="12%"     class="dark">
+										<div class="qzbr"    id="tjfbbcysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjfbbcysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjfbbcysqminp"   class="input_5" name="tjfbbcysqm"  value="" /> 
+										
+										</td>
+						</tr>
+						<tr>
+							
+							<td colspan="6" >
+							其他
+								<input type="radio" id="EcO11e61020f0dd45dd85782d8aad26838e"  name="EcO11e61020f0dd45dd85782d8aad26838e" value="1"  onclick="zdzcqtpb('EcO11e61020f0dd45dd85782d8aad26838e','no','2','GDw9bba4adb18364d3599316cb2ec997edf');" />正常<input type="radio" id="EcO11e61020f0dd45dd85782d8aad26838e"  name="EcO11e61020f0dd45dd85782d8aad26838e" value="2"  onclick="zdzcqtpb('EcO11e61020f0dd45dd85782d8aad26838e','no','2','GDw9bba4adb18364d3599316cb2ec997edf');" />异常
+								<input type="text" name="GDw9bba4adb18364d3599316cb2ec997edf"
+										id="GDw9bba4adb18364d3599316cb2ec997edf" value="" size="50"
+										class="input_5"/>
+							</td>
+								<td class="dark">
+								
+							
+							<div class="qzbr"    id="tjfbbcqtysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjfbbcqtysqm"   value=""  size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjfbbcqtysqminp"   class="input_5" name="tjfbbcqtysqm"  value="" /> 
+								
+						
+										
+										
+										
+										
+										
+										</td>
+						</tr>
+						
+							<tr>
+								<td align="center" class="dark">
+									宫颈涂片*
+								</td>
+								<td colspan="6">
+									<input type="radio" id="IQka5a326893a3948f4820317b3f99ec5a1"  name="IQka5a326893a3948f4820317b3f99ec5a1" value="1"  onclick="zdzcqtpb('IQka5a326893a3948f4820317b3f99ec5a1','no','2','sAGb2ff6f4b47604a3a89975fae39af8da9');" />正常<input type="radio" id="IQka5a326893a3948f4820317b3f99ec5a1"  name="IQka5a326893a3948f4820317b3f99ec5a1" value="2"  onclick="zdzcqtpb('IQka5a326893a3948f4820317b3f99ec5a1','no','2','sAGb2ff6f4b47604a3a89975fae39af8da9');" />异常
+									<input type="text" name="sAGb2ff6f4b47604a3a89975fae39af8da9"
+											id="sAGb2ff6f4b47604a3a89975fae39af8da9" value="" size="20"
+											class="input_5"/> 
+								</td>
+									<td class="dark">
+							<div class="qzbr"    id="tjgjtpysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjgjtpysqm" value=""  size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjgjtpysqminp"   class="input_5" name="tjgjtpysqm"  value="" /> 
+							
+							</td>
+							</tr>
+						
+						<tr>
+							<td align="center" class="dark">
+								其 他*
+							</td>
+							<td colspan="6" >
+								<input type="text" name="Ah_f81f20ec6916485fb3f5f54631ee0bf2" id="Ah_f81f20ec6916485fb3f5f54631ee0bf2"
+									value="" size="20" class="input_5" />
+							</td>
+								<td class="dark">
+						<div class="qzbr"    id="tjfzjcqtysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjfzjcqtysqm" value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjfzjcqtysqminp"   class="input_5" name="tjfzjcqtysqm"  value="" /> 
+							
+										
+										
+										
+										
+										
+										
+										
+										
+										</td>
+						</tr>
+						<tr  class="zytzbsc">
+							<td rowspan="9" align="center" class="dark">
+								中医体质辨识*
+							</td>
+							<td align="center" class="dark">
+								平和质
+							</td>
+							<td colspan="7">
+								<input type="radio" id="gPhz"  name="gPhz" value="1"  onclick="null" />是<input type="radio" id="gPhz"  name="gPhz" value="2"  onclick="null" />基本是
+							</td>
+						</tr>
+						<tr class="zytzbsc">
+							<td align="center" class="dark">
+								气虚质
+							</td>
+							<td colspan="7" >
+								<input type="radio" id="gQxz"  name="gQxz" value="1"  onclick="null" />是<input type="radio" id="gQxz"  name="gQxz" value="2"  onclick="null" />倾向是
+							</td>
+						</tr>
+						<tr class="zytzbsc">
+							<td align="center" class="dark">
+								阳虚质
+							</td>
+							<td colspan="7">
+								<input type="radio" id="gYangxz"  name="gYangxz" value="1"  onclick="null" />是<input type="radio" id="gYangxz"  name="gYangxz" value="2"  onclick="null" />倾向是
+							</td>
+						</tr>
+						<tr class="zytzbsc">
+							<td align="center" class="dark">
+								阴虚质
+							</td>
+							<td colspan="7" >
+								<input type="radio" id="gYinxz"  name="gYinxz" value="1"  onclick="null" />是<input type="radio" id="gYinxz"  name="gYinxz" value="2"  onclick="null" />倾向是
+							</td>
+						</tr>
+						<tr class="zytzbsc">
+							<td align="center" class="dark">
+								痰湿质
+							</td>
+							<td colspan="7">
+								<input type="radio" id="gTsz"  name="gTsz" value="1"  onclick="null" />是<input type="radio" id="gTsz"  name="gTsz" value="2"  onclick="null" />倾向是
+							</td>
+						</tr>
+						<tr class="zytzbsc">
+							<td align="center" class="dark">
+								湿热质
+							</td>
+							<td colspan="7" >
+								<input type="radio" id="gSrz"  name="gSrz" value="1"  onclick="null" />是<input type="radio" id="gSrz"  name="gSrz" value="2"  onclick="null" />倾向是
+							</td>
+						</tr>
+						<tr class="zytzbsc">
+							<td align="center" class="dark">
+								血瘀质
+							</td>
+							<td colspan="7">
+								<input type="radio" id="gXyz"  name="gXyz" value="1"  onclick="null" />是<input type="radio" id="gXyz"  name="gXyz" value="2"  onclick="null" />倾向是
+							</td>
+						</tr>
+						<tr class="zytzbsc">
+							<td align="center" class="dark">
+								气郁质
+							</td>
+							<td colspan="7" >
+								<input type="radio" id="gQyz"  name="gQyz" value="1"  onclick="null" />是<input type="radio" id="gQyz"  name="gQyz" value="2"  onclick="null" />倾向是
+							</td>
+						</tr>
+						<tr class="zytzbsc">
+							<td align="center" class="dark">
+								特秉质
+							</td>
+							<td colspan="7">
+								<input type="radio" id="gTbz"  name="gTbz" value="1"  onclick="null" />是<input type="radio" id="gTbz"  name="gTbz" value="2"  onclick="null" />倾向是
+							</td>
+						</tr>
+					</table>
+					
+				<!-- </div> -->
+			</div>
+			<div id="page3" style="border-top: 0; border-bottom: 0">
+				<div align="center">
+
+					<table border="0" cellspacing="0" cellpadding="0" ctable2" class="QueryTable3 coticeTable" style="border-top: 0;border-bottom: 0">
+
+						<tr>
+							<td rowspan="6"  align="center" class="dark" style="width:8%">
+								现存主要健康问题
+							</td>
+							<td  align="center" class="dark"><div class="change_ys">脑血管疾病</div></td>
+							<td colspan="6" style="width:80%">
+								<input type="checkbox" id="gNxgjb" name="gNxgjb"  checked="checked"  value="1" onclick="zdzcqtpb('gNxgjb','1','99','gNxgjbqt');"/><span>未发现</span><input type="checkbox" id="gNxgjb" name="gNxgjb"  value="2" onclick="zdzcqtpb('gNxgjb','1','99','gNxgjbqt');"/><span>缺血性卒中</span><input type="checkbox" id="gNxgjb" name="gNxgjb"  value="3" onclick="zdzcqtpb('gNxgjb','1','99','gNxgjbqt');"/><span>脑出血</span><input type="checkbox" id="gNxgjb" name="gNxgjb"  value="4" onclick="zdzcqtpb('gNxgjb','1','99','gNxgjbqt');"/><span>蛛网膜下腔出血</span><input type="checkbox" id="gNxgjb" name="gNxgjb"  value="5" onclick="zdzcqtpb('gNxgjb','1','99','gNxgjbqt');"/><span>短暂性脑缺血发作</span><input type="checkbox" id="gNxgjb" name="gNxgjb"  value="99" onclick="zdzcqtpb('gNxgjb','1','99','gNxgjbqt');"/><span>其他</span>
+								<input type="text" name="gNxgjbqt" id="gNxgjbqt"
+									value="" size="20" class="input_5"/>
+							</td>
+								<td rowspan="10" class="dark" style="width:5%">
+							
+						<div class="qzbr"    id="tjxczyjkwtysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjxczyjkwtysqm"  value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjxczyjkwtysqminp"   class="input_5" name="tjxczyjkwtysqm"  value="" /> 
+							
+									
+									
+									
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">肾脏疾病</div></td>
+							<td colspan="6">
+								<input type="checkbox" id="gSzjb" name="gSzjb"  checked="checked"  value="1" onclick="zdzcqtpb('gSzjb','1','99','gSzjbqt');"/><span>未发现</span><input type="checkbox" id="gSzjb" name="gSzjb"  value="2" onclick="zdzcqtpb('gSzjb','1','99','gSzjbqt');"/><span>糖尿病肾病</span><input type="checkbox" id="gSzjb" name="gSzjb"  value="3" onclick="zdzcqtpb('gSzjb','1','99','gSzjbqt');"/><span>肾功能衰竭</span><input type="checkbox" id="gSzjb" name="gSzjb"  value="4" onclick="zdzcqtpb('gSzjb','1','99','gSzjbqt');"/><span>急性肾炎</span><input type="checkbox" id="gSzjb" name="gSzjb"  value="5" onclick="zdzcqtpb('gSzjb','1','99','gSzjbqt');"/><span>慢性肾炎</span><input type="checkbox" id="gSzjb" name="gSzjb"  value="99" onclick="zdzcqtpb('gSzjb','1','99','gSzjbqt');"/><span>其他</span>
+								<input type="text" name="gSzjbqt" id="gSzjbqt"
+									value="" size="20" class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">心血管疾病</div></td>
+							<td colspan="6" >
+								<input type="checkbox" id="gXzjb" name="gXzjb"  checked="checked"  value="1" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>未发现</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="2" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>心肌梗死</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="3" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>心绞痛</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="4" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>冠状动脉血运重建</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="5" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>充血性心力衰竭</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="6" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>心前区疼痛</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="7" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>高血压</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="8" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>夹层动脉瘤</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="9" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>动脉闭塞性疾病</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="10" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>冠心病</span><input type="checkbox" id="gXzjb" name="gXzjb"  value="99" onclick="zdzcqtpb('gXzjb','1','99','gXzjbqt');"/><span>其他</span>
+								<input type="text" name="gXzjbqt" id="gXzjbqt"
+									value="" size="20" class="input_5" />
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">眼部疾病</div></td>
+							<td colspan="6" >
+								<input type="checkbox" id="gYbjb" name="gYbjb"  checked="checked"  value="1" onclick="zdzcqtpb('gYbjb','1','99','gYbjbqt');"/><span>未发现</span><input type="checkbox" id="gYbjb" name="gYbjb"  value="2" onclick="zdzcqtpb('gYbjb','1','99','gYbjbqt');"/><span>视网膜出血或渗出</span><input type="checkbox" id="gYbjb" name="gYbjb"  value="3" onclick="zdzcqtpb('gYbjb','1','99','gYbjbqt');"/><span>视乳头水肿</span><input type="checkbox" id="gYbjb" name="gYbjb"  value="4" onclick="zdzcqtpb('gYbjb','1','99','gYbjbqt');"/><span>白内障</span><input type="checkbox" id="gYbjb" name="gYbjb"  value="99" onclick="zdzcqtpb('gYbjb','1','99','gYbjbqt');"/><span>其他</span>
+								<input type="text" name="gYbjbqt" id="gYbjbqt"
+									value="" size="20" class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">神经系统其他疾病</div></td>
+							<td colspan="6">
+								<input type="checkbox" id="gSjxtjb" name="gSjxtjb"  checked="checked"  value="1" onclick="zdzcqtpb('gSjxtjb','1','99','gSjxtjbqt');"/><span>未发现</span><input type="checkbox" id="gSjxtjb" name="gSjxtjb"  value="2" onclick="zdzcqtpb('gSjxtjb','1','99','gSjxtjbqt');"/><span>阿尔茨海默症(老年性痴呆)</span><input type="checkbox" id="gSjxtjb" name="gSjxtjb"  value="3" onclick="zdzcqtpb('gSjxtjb','1','99','gSjxtjbqt');"/><span>帕金森病</span><input type="checkbox" id="gSjxtjb" name="gSjxtjb"  value="99" onclick="zdzcqtpb('gSjxtjb','1','99','gSjxtjbqt');"/><span>其他</span>
+								<input type="text" name="gSjxtjbqt" id="gSjxtjbqt"
+										value="" size="20" class="input_5"/>
+							</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark"><div class="change_ys">其他系统疾病</div></td>
+							<td colspan="6" >
+								<input type="checkbox" id="gQtxtjb" name="gQtxtjb"  checked="checked"  value="1" onclick="zdzcqtpb('gQtxtjb','1','99','gQtxtjbqt');"/><span>未发现</span><input type="checkbox" id="gQtxtjb" name="gQtxtjb"  value="2" onclick="zdzcqtpb('gQtxtjb','1','99','gQtxtjbqt');"/><span>糖尿病</span><input type="checkbox" id="gQtxtjb" name="gQtxtjb"  value="3" onclick="zdzcqtpb('gQtxtjb','1','99','gQtxtjbqt');"/><span>慢性支气管炎</span><input type="checkbox" id="gQtxtjb" name="gQtxtjb"  value="4" onclick="zdzcqtpb('gQtxtjb','1','99','gQtxtjbqt');"/><span>慢性阻塞性肺气肿</span><input type="checkbox" id="gQtxtjb" name="gQtxtjb"  value="5" onclick="zdzcqtpb('gQtxtjb','1','99','gQtxtjbqt');"/><span>恶性肿瘤</span><input type="checkbox" id="gQtxtjb" name="gQtxtjb"  value="6" onclick="zdzcqtpb('gQtxtjb','1','99','gQtxtjbqt');"/><span>老年性骨关节病</span><input type="checkbox" id="gQtxtjb" name="gQtxtjb"  value="99" onclick="zdzcqtpb('gQtxtjb','1','99','gQtxtjbqt');"/><span>其他</span>
+								<input type="text" name="gQtxtjbqt" id="gQtxtjbqt"
+										value="" size="20" class="input_5" />
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="4" class="dark" align="center">
+								住院治疗情况
+							</td>
+							<input type="hidden" name="zType" id="zType"/>
+							<input type="hidden" name="zRyjcrq" id="zRyjcrq"/>
+							<input type="hidden" name="zCyccrq" id="zCyccrq"/>
+							<input type="hidden" name="zYuanyin" id="zYuanyin"
+												 />
+							<input type="hidden" name="zYljgmc" id="zYljgmc"
+												 />
+							<input type="hidden" name="zBingah" id="zBingah"
+												 />
+							<td class="dark" rowspan="2" align="center">
+								住院史
+							</td>
+							
+							<td colspan="6" ><input type="radio" id="zyzlqkyw"  name="zyzlqkyw" value="1"  onclick="tablepb('zyzlqkyw','zyzlqk');" />有<input type="radio" id="zyzlqkyw"  name="zyzlqkyw" value="2"  checked onclick="tablepb('zyzlqkyw','zyzlqk');" />无</td>
+							
+									</tr>
+									<tr>
+									<td colspan="6" style="padding:0">
+								<table width="100%" border="0" class="new_tb2" id="zyzlqk" cellspacing="0" cellpadding="0">
+									<tr>
+										<td align="center">
+											入院日期
+										</td>
+										<td align="center">
+											出院日期
+										</td>
+										<td align="center">
+											原 因
+										</td>
+										<td align="center">
+											医疗机构及科室名称
+										</td>
+										<td align="center">
+											病案号
+										</td>
+										<td align="center">
+											<input type="button" value="添加" onclick="tianjia('zyzlqk');" class="buttonInput2"/>
+										</td>
+									<tr>
+									</td>
+										<td align="center">
+											<input type="text" name="zRyjcrq_" id="zRyjcrq_" size="10"
+												class="Wdate"
+												onchange="checkDate('入院日期',this),checkHappentime('入院日期',this),checkXcsfDate('zCyccrq',this)"
+												onclick="WdatePicker({dateFmt:'yyyy-MM-dd',skin:'default'})" />
+										</td>
+										<td align="center">
+											<input type="text" name="zCyccrq_" id="zCyccrq_" size="10" class="Wdate"
+												onchange="checkDate('出院日期',this),checkHappentime('出院日期',this),checksfDate('zRyjcrq',this)"
+												onclick="WdatePicker({dateFmt:'yyyy-MM-dd',skin:'default'})" />
+										</td>
+										<td align="center">
+											<input type="text" name="zYuanyin_" id="zYuanyin_" size="10" />
+										</td>
+										<td align="center">
+											<input type="text" name="zYljgmc_" id="zYljgmc_" size="10" />
+										</td>
+										<td align="center">
+											<input type="text" name="zBingah_" id="zBingah_" size="10" />
+										</td>
+										<td align="center">
+											<input type="hidden" name="zType_" value="1" />
+											<input name="input" type="button" value="删除" class="buttonInput2"
+												onclick="$(this).parent('td').parent('tr').remove();">
+										</td>
+									</tr>
+								</table>
+							</td>
+							
+							
+						</tr>
+						<tr>
+							<td align="center" rowspan="2" class="dark" style="width:10%">家庭病床史</td>
+							<td colspan="6" >
+								<input type="radio" id="jzbcsyw"  name="jzbcsyw" value="1"  onclick="tablepb('jzbcsyw','jzbcs');" />有<input type="radio" id="jzbcsyw"  name="jzbcsyw" value="2"  checked onclick="tablepb('jzbcsyw','jzbcs');" />无
+							</td>
+						</tr>
+						<tr>
+							<td colspan="6" style="padding:0">
+								<table width="100%" border="0" id="jzbcs" class="new_tb2" cellspacing="0" cellpadding="0">
+									<tr>
+										<td align="center">
+											建床日期
+										</td>
+										<td align="center">
+											撤床日期
+										</td>
+										<td align="center">
+											原 因
+										</td>
+										<td align="center">
+											医疗机构及科室名称
+										</td>
+										<td width="20%" align="center">
+											病案号
+										</td>
+										<td align="center">
+											<input type="button" value="添加" onclick="tianjia('jzbcs');" class="buttonInput2"/>
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<input type="text" name="zRyjcrq_" id="zRyjcrq_1" size="10" class="Wdate"
+												onchange="checkDate('建床日期',this),checkHappentime('建床日期',this),checkXcsfDate('zCyccrq1',this)"
+												onclick="WdatePicker({dateFmt:'yyyy-MM-dd',skin:'default'})" />
+										</td>
+										<td align="center">
+											<input type="text" name="zCyccrq_" id="zCyccrq_1" size="10" class="Wdate"
+												onchange="checkDate('撤床日期',this),checkHappentime('撤床日期',this),checksfDate('zRyjcrq1',this)"
+												onclick="WdatePicker({dateFmt:'yyyy-MM-dd',skin:'default'})" />
+										</td>
+										<td align="center">
+											<input type="text" name="zYuanyin_" size="10" />
+										</td>
+										<td align="center">
+											<input type="text" name="zYljgmc_" size="10" />
+										</td>
+										<td align="center">
+											<input type="text" name="zBingah_" size="10" />
+										</td>
+										<td align="center">
+											<input type="hidden" name="zType_" value="2" />
+											<input name="input" type="button" value="删除" class="buttonInput2"
+												id="jzbcsdel"
+												onclick="$(this).parent('td').parent('tr').remove();" />
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark" rowspan="2">主要用药情况</td>
+							<td colspan="7"><input type="radio" id="zyyyqkyw"  name="zyyyqkyw" value="1"  onclick="tablepb('zyyyqkyw','zyyyqk');" />有<input type="radio" id="zyyyqkyw"  name="zyyyqkyw" value="2"  checked onclick="tablepb('zyyyqkyw','zyyyqk');" />无
+							</td>
+							<td  rowspan="4" class="dark">
+							
+							
+						<div class="qzbr"    id="tjzyyyqkysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjzyyyqkysqm" value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjzyyyqkysqminp"   class="input_5" name="tjzyyyqkysqm"  value="" /> 
+						</td>
+							</tr>
+						<tr>
+							<td colspan="7" style="padding:0" height="100%">								
+								<table width="100%" id="zyyyqk" border="0" class="new_tb2"height="100%" cellspacing="0" cellpadding="0">
+									<tr>
+										<td align="center">
+											药物名称
+										</td>
+										<td align="center">
+											用法
+										</td>
+										<td align="center">
+											用量
+										</td>
+										<td align="center">
+											用药时间
+										</td>
+										<td align="center">
+											服药依从性
+											<br />
+										<td align="center">
+											<input type="button" value="添加" onclick="tianjia('zyyyqk');" class="buttonInput2"/>
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<input type="text" name="yYwmc_" id="yYwmc_"
+												onblur="checkLength('药物名称',this,100)" size="12" />
+												<input type="hidden" name="yYwmc" id="yYwmc"
+												 />
+										</td>
+										<td align="center">
+											<input type="text" name="yYongfa_" id="yYongfa_"
+												onblur="checkLength('用法',this,100)" size="12" />
+												<input type="hidden" name="yYongfa" id="yYongfa"
+												 />
+										</td>
+										<td align="center">
+											<input type="text" name="yYongl_" id="yYongl_"
+												onblur="checkLength('用量',this,100)" size="12" />
+												<input type="hidden" name="yYongl" id="yYongl"
+												 />
+										</td>
+										<td align="center">
+											<input type="text" name="yYysj_" id="yYysj_"
+												onblur="checkLength('用药时间',this,20)" size="12" />
+												<input type="hidden" name="yYysj" id="yYysj"
+												 />
+										</td>
+										<td align="center">
+										<input type="hidden" name="yFyycx" id="yFyycx"
+												 />
+											<select name='yFyycx_' id='yFyycx_'>
+												<option value='规律'>
+													规律
+												</option>
+												<option value='间断'>
+													间断
+												</option>
+												<option value='不服药'>
+													不服药
+												</option>
+											</select>
+										</td>
+										<td align="center">
+											<input name="input" type="button" value="删除" class="buttonInput2"
+												id="zyyyqkdel"
+												onclick="$(this).parent('td').parent('tr').remove();" />
+										</td>
+									</tr>
+								</table>
+							</td>						
+							
+						</tr>
+						<tr>
+							<td align="center" class="dark" rowspan="2" >非免疫规划预防接种史</td>
+							<td colspan="7" >
+								<input type="radio" id="fmyghyfyw"  name="fmyghyfyw" value="1"  onclick="tablepb('fmyghyfyw','fmyghyf');" />有<input type="radio" id="fmyghyfyw"  name="fmyghyfyw" value="2"  checked onclick="tablepb('fmyghyfyw','fmyghyf');" />无</td>
+									</tr>
+						<tr>
+							<td colspan="7" style="padding:0">
+								<table width="100%" id="fmyghyf" border="0"  height="145" class="new_tb2" cellspacing="0" cellpadding="0">
+									<tr>
+										<td align="center">
+											接种名称
+										</td>
+										<td align="center">
+											接种日期
+										</td>
+										<td align="center">
+											接种机构
+										</td>
+										<td align="center">
+											<input name="fmyghyfadd" type="button" value="添加"
+												onclick="tianjia('fmyghyf');" class="buttonInput2"/>
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<input type="text" name="fJzmc_" id="fJzmc_" size="15" />
+											<input type="hidden" name="fJzmc" id="fJzmc"
+												 />
+										</td>
+										<td align="center">
+											<input type="text" name="fJzrq_" id="fJzrq_"
+												 size="15" class="Wdate"
+												onclick="WdatePicker({dateFmt:'yyyy-MM-dd',skin:'default'})" />
+												<input type="hidden" name="fJzrq" id="fJzrq"
+												 />
+										</td>
+										<td align="center">
+											<input type="text" name="fJzjg_" id="fJzjg_"
+												 size="15" />
+												 <input type="hidden" name="fJzjg" id="fJzjg"
+												 />
+										</td>
+										<td align="center">
+											<input name="input" type="button" value="删除" class="buttonInput2"
+												id="fmyghyfdel"
+												onclick="$(this).parent('td').parent('tr').remove();" />
+										</td>
+									</tr>
+								</table>
+							</td>
+							
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								<div>
+									健康评价
+								</div>
+							</td>
+							<td colspan="7" >
+								<input type="radio" id="gJkpj"  name="gJkpj" value="1"  checked onclick="xyqkpb('gJkpj','2','gJkpjyc1@gJkpjyc2@gJkpjyc3@gJkpjyc4','gJkpjyc1=gJkpjyc2=gJkpjyc3=gJkpjyc4');" />体检无异常<input type="radio" id="gJkpj"  name="gJkpj" value="2"  onclick="xyqkpb('gJkpj','2','gJkpjyc1@gJkpjyc2@gJkpjyc3@gJkpjyc4','gJkpjyc1=gJkpjyc2=gJkpjyc3=gJkpjyc4');" />有异常
+								</br>
+								异常1: <input type="text" name="gJkpjyc1" id="gJkpjyc1"
+									value=""  class="input_5"  size="50" />
+								</br> 异常2: <input type="text" name="gJkpjyc2" id="gJkpjyc2"
+									value=""  class="input_5" size="50" />
+								</br> 异常3: <input type="text" name="gJkpjyc3" id="gJkpjyc3"
+									value=""  class="input_5" size="50" />
+								</br> 异常4: <input type="text" name="gJkpjyc4" id="gJkpjyc4"
+									value=""  class="input_5" size="50" />
+							</td>
+								<td width="12%"    class="dark">
+						
+							<div class="qzbr"    id="tjjkpjysqm"   style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjjkpjysqm"   value="" size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjjkpjysqminp"   class="input_5" name="tjjkpjysqm"  value="" /> 
+												</td>
+						</tr>
+						<tr>
+							<td  align="center" class="dark" rowspan="2"><div class="change_ys">健康指导</div></td>
+							<td  colspan="7">
+								<input type="checkbox" id="gJkzd" name="gJkzd"  checked="checked"  value="1" onclick="null"/><span>定期随访</span><br/><input type="checkbox" id="gJkzd" name="gJkzd"  value="2" onclick="null"/><span>纳入慢性病管理</span><br/><input type="checkbox" id="gJkzd" name="gJkzd"  value="3" onclick="null"/><span>建议复查</span><br/><input type="checkbox" id="gJkzd" name="gJkzd"  value="4" onclick="null"/><span>建议转诊</span>
+							</td>
+							<td class="dark" rowspan="2">
+								
+					
+					<div class="qzbr" id="tjjkzdysqm" style="width: 40px;height: 30px;border-bottom:1px solid black;display: inline;">
+     					 
+      					  </div><div style="display: inline;">签字板</div><br/><br/>
+        						<input type="text" id="" name="sdtjjkzdysqm"  value=""  size="2" style="border:0px;border-bottom:black 1px solid;"/><br/><div style="display: inline;">手动签</div>
+     					    <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm;"  type="application/x-florentis-signature"></object></div>  
+     				    <input  type="hidden"  id="tjjkzdysqminp"   class="input_5" name="tjjkzdysqm"  value="" /> 	
+							</td>
+							</tr>
+						<tr>
+							<td colspan="7" valign="top" >危险因素控制：</br>
+								
+								      <input type="checkbox" name="gWxyskz" id="null" value="1" onclick="xyqkpb('gWxyskz','97=98=99','gWxystz=gWsysym=gWxysqt','gWxystz=gWsysym=gWxysqt');"/>戒烟
+							          
+										
+										
+										
+									
+								
+								      <input type="checkbox" name="gWxyskz" id="null" value="2" onclick="xyqkpb('gWxyskz','97=98=99','gWxystz=gWsysym=gWxysqt','gWxystz=gWsysym=gWxysqt');"/>健康饮酒
+							          
+										
+										
+										
+									
+								
+								      <input type="checkbox" name="gWxyskz" id="null" value="3" onclick="xyqkpb('gWxyskz','97=98=99','gWxystz=gWsysym=gWxysqt','gWxystz=gWsysym=gWxysqt');" checked/>饮食
+							          
+										
+										
+										
+									
+								
+								      <input type="checkbox" name="gWxyskz" id="null" value="4" onclick="xyqkpb('gWxyskz','97=98=99','gWxystz=gWsysym=gWxysqt','gWxystz=gWsysym=gWxysqt');" checked/>锻炼
+							          
+										
+										
+										
+									
+								
+								      <input type="checkbox" name="gWxyskz" id="null" value="97" onclick="xyqkpb('gWxyskz','97=98=99','gWxystz=gWsysym=gWxysqt','gWxystz=gWsysym=gWxysqt');"/>减体重
+							          
+										
+								          （目标：<input type="text" name="gWxystz" id="gWxystz"
+												value="" size="5" class="input_5" />KG)</br>
+										
+										
+										
+									
+								
+								      <input type="checkbox" name="gWxyskz" id="null" value="98" onclick="xyqkpb('gWxyskz','97=98=99','gWxystz=gWsysym=gWxysqt','gWxystz=gWsysym=gWxysqt');"/>建议疫苗接种
+							          
+										
+										
+											<input type="text" name="gWsysym" id="gWsysym"
+												value="" size="10" class="input_5" />
+											<br />
+										
+										
+									
+								
+								      <input type="checkbox" name="gWxyskz" id="null" value="99" onclick="xyqkpb('gWxyskz','97=98=99','gWxystz=gWsysym=gWxysqt','gWxystz=gWsysym=gWxysqt');"/>其他
+							          
+										
+										
+										
+											<input type="text" name="gWxysqt" id="gWxysqt"
+												value="" size="10" class="input_5" />
+										
+									
+								
+							</td>
+											
+						</tr>
+						
+						
+						<tr>
+						<td  align="center" class="dark" rowspan="6">结果反馈</td>
+						<td colspan="8" align="right" style="border-bottom: none; ">以上体检结果、健康评价已面对面反馈本人（家属），并已进行健康指导。</td>
+						</tr>
+						<tr>
+						<td colspan="8"  style="border: none; " align="right">
+						签字板签字 :<div class="qzbr"  id="fkqzbr"  style="width: 70px;height: 30px;border-bottom:1px solid black;display: inline-block;">
+        				</div> <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm"
+        				  type="application/x-florentis-signature"></object></div> <input  type="hidden"  id="fkqzbrinp"   class="input_5 qzbr" name="fkqzbr"  value="" /> 
+        (本人)/<div class="qzbr"  id="fkqzjs" style="width: 70px;height: 30px;border-bottom:1px solid black;display: inline-block;">
+        				</div>
+     					 <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm"
+        				  type="application/x-florentis-signature"></object></div>  
+        				 <input  type="hidden"  id="fkqzjsinp"   class="input_5 qzbr" name="fkqzjs"  value="" />  (家属)</td>
+						</tr>
+						
+						<tr>
+							<td colspan="8"  style="border: none;" align="right">
+							 手动签字 :<input type="text" id="" name="sdfkqzbr" value=""  size="8" style="border:0px;border-bottom:black 1px solid;"/>(本人)/<input type="text" id="" name="sdfkqzjs"  value=""  size="8" style="border:0px;border-bottom:black 1px solid;"/>(家属) 
+							</td>
+						</tr>
+						<tr>
+						<td colspan="8"  style="border: none;"  align="right"> 
+						反馈人签字 :<div class="qzbr"    id="fkrqz"   style="width: 70px;height: 30px;border-bottom:1px solid black;display: inline-block;">
+        				</div><br/><br/>
+        				反馈人手动签字：<input type="text" id="" name="sdfkrqz" value="" size="8" style="border:0px;border-bottom:black 1px solid;"/>
+     					 <div style="display: none;"><object id="sigCtl1" style="width:60mm;height:35mm"
+        				  type="application/x-florentis-signature"></object></div>  
+        				 <input  type="hidden"  id="fkrqzinp"   class="input_5 qzbr" name="fkrqz"  value="" /> 
+					</td></tr>
+						<tr>
+						<td colspan="8"  align="right">
+						反馈时间 : <input type="text"   name="fktime" class="Wdate"	onclick="WdatePicker({dateFmt:'yyyy年MM月dd日',skin:'default'})" ></td>
+						
+						</tr>
+					</table>
+					<table border="0" cellspacing="0" cellpadding="0" class="QueryTable3 coticeTable">
+						<tr>
+							<td align="center" class="dark" nowrap>
+								创建时间:
+							</td>
+							<td style="width:25%">
+								2020-12-14 17:44:50
+								<input type="hidden" name="createtime"
+									value="2020-12-14 17:44:50" />
+							</td>
+							<td align="center" class="dark" nowrap>
+								最近更新时间:
+							</td>
+							<td style="width:25%">
+								2020-12-14 17:44:50
+								<input type="hidden" name="updatetime"
+									value="2020-12-14 17:44:50" />
+							</td>
+							<td  align="center" class="dark" nowrap>
+								当前所属机构:
+							</td>
+							<td style="width:25%">
+								丁坞镇卫生院
+								<input type="hidden" name="pRgid" value="371481B10014" />
+							</td>
+						</tr>
+						<tr>
+							<td align="center" class="dark">
+								创建机构:
+							</td>
+							<td>
+								丁坞镇卫生院
+								<input type="hidden" name="creatregion"
+									value="371481B10014" />
+							</td>
+							<td align="center" class="dark">
+								创建人:
+							</td>
+							<td>
+								赵培友
+								<input type="hidden" name="createuser"
+									value="371481B100140015" />
+							</td>
+							<td align="center" class="dark">
+								最近修改人:
+							</td>
+							<td>
+								赵培友
+								<input type="hidden" name="updateuser"
+									value="371481B100140015" />
+							</td>
+						</tr>
+					</table>
+					</td>
+					</tr>
+					</table>
+					</td>
+					</tr>
+					</table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<table height="10"></table>
+		<table class="nostyle">
+			<tr></tr>
+		</table>
+	<script type="text/javascript" src="/sdcsm/js/z_encrypt_security.js"></script>
+	<script type="text/javascript" src="/sdcsm/js/z_encrypt_jbase64.js"></script>
+	<script type="text/javascript" src="/sdcsm/js/z_encrypt_aes.js"></script>
+	<script type="text/javascript" src="/sdcsm/js/z_encrypt_pad-zeropadding.js"></script>
+		
+	
